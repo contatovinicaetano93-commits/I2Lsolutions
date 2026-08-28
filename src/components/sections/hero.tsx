@@ -19,7 +19,7 @@ export function Hero() {
               "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80')",
           }}
         />
-        <div className="absolute inset-0 bg-linear-to-r from-background via-background/40 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-r from-background via-background/70 to-black/20" />
       </div>
       <div className="relative mx-auto w-full max-w-6xl">
         <p className="mb-8 flex items-center gap-3 text-[11px] font-medium tracking-[0.32em] text-primary uppercase">

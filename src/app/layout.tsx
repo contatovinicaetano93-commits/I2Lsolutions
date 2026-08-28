@@ -34,6 +34,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="pt-BR"
       className={`${geistSans.variable} ${cormorant.variable} h-full scroll-smooth antialiased`}
+      style={{ colorScheme: "dark" }}
     >
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground">
         <SiteHeader />
