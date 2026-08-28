@@ -46,9 +46,9 @@ export const projects = [
     about:
       "Uma casa pensada para o cotidiano da família, com circulação clara, luz natural e materiais que envelhecem bem. O projeto uniu arquitetura e interiores desde a concepção, para que cada ambiente chegasse à obra sem retrabalho.",
     images: [
-      "/images/project-jardins.jpg",
-      "/images/project-jardins-2.jpg",
-      "/images/hero.jpg",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
     ],
   },
   {
@@ -60,9 +60,9 @@ export const projects = [
     about:
       "Releitura de um apartamento existente: a planta foi reorganizada, a iluminação redesenhada e os acabamentos atualizados sem perder a essência do imóvel. O retrofit aconteceu com a família no radar de prazo e custo.",
     images: [
-      "/images/project-itaim.jpg",
-      "/images/project-itaim-2.jpg",
-      "/images/office.jpg",
+      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80",
     ],
   },
   {
@@ -74,9 +74,9 @@ export const projects = [
     about:
       "Um refúgio de fim de semana com relação direta com a paisagem. Os espaços internos e externos foram desenhados juntos, com materiais honestos e uma paleta que conversa com o entorno.",
     images: [
-      "/images/project-campo.jpg",
-      "/images/project-campo-2.jpg",
-      "/images/process.jpg",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdbc?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80",
     ],
   },
 ] as const;

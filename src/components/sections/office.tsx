@@ -27,7 +27,7 @@ export function Office() {
         </div>
         <div className="relative aspect-[4/3] overflow-hidden bg-muted">
           <Image
-            src="/images/office.jpg"
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80"
             alt="Ambiente de escritório da I2L no Itaim Bibi"
             fill
             className="object-cover"

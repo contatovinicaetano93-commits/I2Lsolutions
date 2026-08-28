@@ -14,7 +14,10 @@ export function Hero() {
       >
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/hero.jpg')" }}
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80')",
+          }}
         />
         <div className="absolute inset-0 bg-linear-to-r from-background via-background/40 to-transparent" />
       </div>
