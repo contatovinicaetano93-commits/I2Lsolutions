@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Geist } from "next/font/google";
+import { Geist, Playfair_Display } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { WhatsAppFloat } from "@/components/whatsapp-float";
@@ -10,9 +10,10 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const cormorant = Cormorant_Garamond({
+const playfair = Playfair_Display({
   variable: "--font-cormorant",
   subsets: ["latin"],
+  style: ["normal", "italic"],
   weight: ["400", "500", "600", "700"],
 });
 
@@ -33,7 +34,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="pt-BR"
-      className={`${geistSans.variable} ${cormorant.variable} h-full scroll-smooth antialiased`}
+      className={`${geistSans.variable} ${playfair.variable} h-full scroll-smooth antialiased`}
       style={{ colorScheme: "dark" }}
     >
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground">
