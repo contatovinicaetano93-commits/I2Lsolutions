@@ -4,11 +4,9 @@ Site institucional da **I2L Solutions**, escritório de arquitetura de Isa Luiza
 
 ## Produção
 
-O site público está em **[https://i2lsolutions.vercel.app](https://i2lsolutions.vercel.app)**.
+O site público está em **[https://i2-lsolutions.vercel.app](https://i2-lsolutions.vercel.app)** (monograma I2L no header).
 
 O código está no GitHub: [contatovinicaetano93-commits/I2Lsolutions](https://github.com/contatovinicaetano93-commits/I2Lsolutions).
-
-Não use `i2-lsolutions.vercel.app` — esse projeto antigo na Vercel ficou com o deploy Git em 404.
 
 ## Stack
 
