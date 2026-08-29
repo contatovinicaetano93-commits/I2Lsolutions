@@ -702,10 +702,18 @@ export function ArrowIcon({ className }: IconProps) {
 /* ---- src/components/logo.tsx ---- */
 export function Logo({ className }: { className?: string }) {
   return (
-    <a href="#inicio" className={cn("group inline-flex items-center gap-3", className)}>
-      <span className="flex size-8 items-center justify-center bg-white text-[10px] font-medium tracking-[0.2em] text-black">
-        I2L
-      </span>
+    <a
+      href="#inicio"
+      className={cn("group inline-flex items-center gap-3", className)}
+      aria-label="I2L Solutions"
+    >
+      <img
+        src="/images/logo.png"
+        alt=""
+        width={48}
+        height={57}
+        className="h-11 w-auto sm:h-12"
+      />
       <span className="font-heading text-lg leading-none tracking-[0.22em] text-white">
         SOLUTIONS
       </span>
@@ -847,9 +855,8 @@ export function SiteHeader() {
             </SheetTrigger>
             <SheetContent side="right" className="bg-black">
               <SheetHeader>
-                <SheetTitle className="font-heading text-left text-2xl tracking-wide text-white">
-                  I2L Solutions
-                </SheetTitle>
+                <SheetTitle className="sr-only">I2L Solutions</SheetTitle>
+                <Logo />
               </SheetHeader>
               <nav className="mt-8 flex flex-col gap-5 px-4">
                 {nav.map((item) => (

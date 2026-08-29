@@ -60,9 +60,8 @@ export function SiteHeader() {
             </SheetTrigger>
             <SheetContent side="right" className="bg-black">
               <SheetHeader>
-                <SheetTitle className="font-heading text-left text-2xl tracking-wide text-white">
-                  I2L Solutions
-                </SheetTitle>
+                <SheetTitle className="sr-only">I2L Solutions</SheetTitle>
+                <Logo />
               </SheetHeader>
               <nav className="mt-8 flex flex-col gap-5 px-4">
                 {nav.map((item) => (
