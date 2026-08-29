@@ -22,7 +22,7 @@ export function Section({
       className={cn(
         "scroll-mt-24 px-6 py-20 sm:px-10 sm:py-28 lg:px-16",
         tone === "cream" && "bg-background",
-        tone === "sand" && "bg-muted/60",
+        tone === "sand" && "bg-card",
         tone === "ink" && "bg-foreground text-background",
         className,
       )}

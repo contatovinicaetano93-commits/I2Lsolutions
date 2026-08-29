@@ -30,7 +30,7 @@ export function SiteHeader() {
     <header
       className={cn(
         "fixed top-0 z-50 w-full transition-colors",
-        scrolled ? "bg-black/95" : "bg-transparent",
+        scrolled ? "bg-background/95" : "bg-transparent",
       )}
     >
       <div className="flex h-20 items-center px-6 sm:px-10 lg:px-16">
@@ -67,7 +67,7 @@ export function SiteHeader() {
                 <Menu className="size-4" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-black">
+            <SheetContent side="right" className="bg-background">
               <SheetHeader>
                 <SheetTitle className="sr-only">I2L Solutions</SheetTitle>
                 <Logo />

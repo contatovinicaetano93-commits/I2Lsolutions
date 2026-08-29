@@ -31,7 +31,7 @@ const choices = [
 
 export function Services() {
   return (
-    <Section id="servicos" number="05" kicker="Soluções I2L">
+    <Section id="servicos" number="04" kicker="Soluções I2L" tone="sand">
       <h2 className="font-heading max-w-3xl text-4xl leading-tight sm:text-5xl">
         Qual serviço escolher?
       </h2>

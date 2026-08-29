@@ -4,7 +4,7 @@ import { WhatsAppButton } from "@/components/whatsapp-button";
 
 export function Hero() {
   return (
-    <section id="inicio" className="relative min-h-svh overflow-hidden bg-black">
+    <section id="inicio" className="relative min-h-svh overflow-hidden bg-background">
       <div className="absolute inset-x-0 bottom-0 h-[52vh] lg:inset-y-0 lg:left-[36%] lg:h-auto">
         <Image
           src="/images/hero.jpg"
@@ -16,7 +16,7 @@ export function Hero() {
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black via-black/55 via-[35%] to-transparent to-[70%] lg:bg-gradient-to-r lg:from-black lg:via-black/70 lg:via-[32%] lg:to-transparent lg:to-[62%]"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background via-background/55 via-[35%] to-transparent to-[70%] lg:bg-gradient-to-r lg:from-background lg:via-background/70 lg:via-[32%] lg:to-transparent lg:to-[62%]"
         />
       </div>
       <div className="relative z-10 grid min-h-svh lg:grid-cols-2">
@@ -38,7 +38,7 @@ export function Hero() {
               asChild
               className="h-12 min-w-[11.5rem] rounded-none border border-white bg-white px-8 text-[10px] font-light tracking-[0.32em] text-black uppercase hover:bg-transparent hover:text-white"
             >
-              <a href="#a-i2l">Conheça a I2L</a>
+              <a href="#compromisso">Conheça a I2L</a>
             </Button>
             <WhatsAppButton variant="outline">Fale conosco</WhatsAppButton>
           </div>

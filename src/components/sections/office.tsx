@@ -6,7 +6,7 @@ import { messages, site } from "@/lib/site";
 
 export function Office() {
   return (
-    <Section id="contato" number="06" kicker="Itaim Bibi · Brasil" tone="sand">
+    <Section id="contato" number="05" kicker="Itaim Bibi · Brasil">
       <div className="grid items-center gap-12 lg:grid-cols-2">
         <div>
           <h2 className="font-heading text-4xl leading-tight sm:text-5xl">

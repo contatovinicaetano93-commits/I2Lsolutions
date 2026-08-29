@@ -19,7 +19,7 @@ export function Projects() {
   const project = projects[active];
 
   return (
-    <Section id="projetos" number="04" kicker="Projetos" tone="sand">
+    <Section id="projetos" number="03" kicker="Projetos">
       <h2 className="font-heading max-w-3xl text-4xl leading-tight sm:text-5xl">
         Projetos selecionados.
       </h2>
