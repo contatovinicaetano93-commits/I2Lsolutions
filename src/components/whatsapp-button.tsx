@@ -19,11 +19,11 @@ export function WhatsAppButton({
       className={cn(
         "h-12 min-w-[11.5rem] rounded-none px-8 text-[10px] font-light tracking-[0.32em] uppercase",
         variant === "solid" &&
-          "border border-white bg-white text-black hover:bg-transparent hover:text-white",
+          "border border-primary bg-primary text-primary-foreground hover:bg-transparent hover:text-primary",
         variant === "outline" &&
-          "border-white/35 bg-transparent text-white hover:border-white hover:bg-white hover:text-black",
+          "border-primary/35 bg-transparent text-primary hover:border-primary hover:bg-primary hover:text-primary-foreground",
         variant === "light" &&
-          "border-white/35 bg-transparent text-white hover:border-white hover:bg-white hover:text-black",
+          "border-primary/35 bg-transparent text-primary hover:border-primary hover:bg-primary hover:text-primary-foreground",
         className,
       )}
       variant={variant === "solid" ? "default" : "outline"}

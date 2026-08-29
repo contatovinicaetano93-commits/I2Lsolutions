@@ -30,7 +30,7 @@ export function SiteHeader() {
     <header
       className={cn(
         "fixed top-0 z-50 w-full transition-colors",
-        scrolled ? "bg-background/95" : "bg-transparent",
+        scrolled ? "bg-black/95" : "bg-transparent",
       )}
     >
       <div className="flex h-20 items-center px-6 sm:px-10 lg:px-16">
@@ -40,7 +40,7 @@ export function SiteHeader() {
             <a
               key={item.href}
               href={item.href}
-              className="text-[10px] font-light tracking-[0.26em] text-white/55 uppercase transition-colors duration-500 hover:text-white xl:text-[11px]"
+              className="text-[10px] font-light tracking-[0.26em] text-foreground/55 uppercase transition-colors duration-500 hover:text-foreground xl:text-[11px]"
             >
               {item.label}
             </a>
@@ -61,13 +61,13 @@ export function SiteHeader() {
               <Button
                 variant="outline"
                 size="icon"
-                className="rounded-none border-white/25 bg-transparent text-white hover:bg-white hover:text-black"
+                className="rounded-none border-primary/25 bg-transparent text-primary hover:bg-primary hover:text-primary-foreground"
                 aria-label="Abrir menu"
               >
                 <Menu className="size-4" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-background">
+            <SheetContent side="right" className="bg-black">
               <SheetHeader>
                 <SheetTitle className="sr-only">I2L Solutions</SheetTitle>
                 <Logo />
@@ -78,7 +78,7 @@ export function SiteHeader() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="text-sm font-light tracking-[0.22em] text-white uppercase"
+                    className="text-sm font-light tracking-[0.22em] text-foreground uppercase"
                   >
                     {item.label}
                   </a>

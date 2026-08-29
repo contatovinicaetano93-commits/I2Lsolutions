@@ -6,13 +6,13 @@ import { messages, site } from "@/lib/site";
 
 export function Office() {
   return (
-    <Section id="contato" number="05" kicker="Itaim Bibi · Brasil">
+    <Section id="contato" number="06" kicker="Itaim Bibi · Brasil" tone="sand">
       <div className="grid items-center gap-12 lg:grid-cols-2">
         <div>
           <h2 className="font-heading text-4xl leading-tight sm:text-5xl">
             Atendemos o Brasil todo.
           </h2>
-          <p className="mt-6 max-w-md font-heading text-2xl leading-snug text-white/85 sm:text-3xl">
+          <p className="mt-6 max-w-md font-heading text-2xl leading-snug text-foreground/85 sm:text-3xl">
             Vamos transformar sua ideia em projeto?
           </p>
           <p className="mt-5 max-w-md text-base leading-8 text-muted-foreground">
@@ -23,7 +23,7 @@ export function Office() {
             href={`https://wa.me/${site.whatsapp.e164}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 flex items-center gap-3 text-white/80 transition-colors hover:text-white"
+            className="mt-8 flex items-center gap-3 text-foreground/80 transition-colors hover:text-foreground"
           >
             <WhatsAppIcon className="size-8" />
             <span className="text-lg font-light">{site.whatsapp.display}</span>

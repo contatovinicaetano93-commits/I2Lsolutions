@@ -22,13 +22,13 @@ export function Section({
       className={cn(
         "scroll-mt-24 px-6 py-20 sm:px-10 sm:py-28 lg:px-16",
         tone === "cream" && "bg-background",
-        tone === "sand" && "bg-card",
+        tone === "sand" && "bg-muted/60",
         tone === "ink" && "bg-foreground text-background",
         className,
       )}
     >
       <div className="mx-auto max-w-6xl">
-        <p className="mb-8 flex items-center gap-3 text-[10px] font-light tracking-[0.36em] text-white/45 uppercase">
+        <p className="mb-8 flex items-center gap-3 text-[10px] font-light tracking-[0.36em] text-foreground/45 uppercase">
           <span>{number}</span>
           <span className="h-px w-8 bg-primary/50" />
           <span>{kicker}</span>

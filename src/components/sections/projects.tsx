@@ -19,11 +19,11 @@ export function Projects() {
   const project = projects[active];
 
   return (
-    <Section id="projetos" number="03" kicker="Projetos">
+    <Section id="projetos" number="04" kicker="Projetos" tone="sand">
       <h2 className="font-heading max-w-3xl text-4xl leading-tight sm:text-5xl">
         Projetos selecionados.
       </h2>
-      <p className="mt-4 font-heading text-xl italic text-white/60 sm:text-2xl">
+      <p className="mt-4 font-heading text-xl italic text-foreground/60 sm:text-2xl">
         Cada projeto, uma solução.
       </p>
       <div className="mt-10 flex flex-wrap gap-2">
@@ -35,8 +35,8 @@ export function Projects() {
             className={cn(
               "border px-5 py-2.5 text-[10px] font-light tracking-[0.24em] uppercase transition-all duration-500",
               index === active
-                ? "border-white bg-white text-black"
-                : "border-white/20 bg-transparent text-white/70 hover:border-white/60 hover:text-white",
+                ? "border-primary bg-primary text-primary-foreground"
+                : "border-primary/20 bg-transparent text-foreground/70 hover:border-primary/60 hover:text-foreground",
             )}
           >
             {item.name}
@@ -57,10 +57,10 @@ export function Projects() {
         <div className="space-y-6">
           <div>
             <h3 className="font-heading text-4xl">{project.name}</h3>
-            <p className="mt-3 text-[11px] font-light tracking-[0.22em] text-white/50 uppercase">
+            <p className="mt-3 text-[11px] font-light tracking-[0.22em] text-foreground/50 uppercase">
               {project.place}
             </p>
-            <p className="mt-2 text-[11px] font-light tracking-[0.22em] text-white/70 uppercase">
+            <p className="mt-2 text-[11px] font-light tracking-[0.22em] text-foreground/70 uppercase">
               {project.services}
             </p>
           </div>
@@ -69,7 +69,7 @@ export function Projects() {
           </p>
           <Button
             variant="outline"
-            className="h-12 rounded-none border-white/35 px-8 text-[10px] font-light tracking-[0.32em] uppercase hover:border-white hover:bg-white hover:text-black"
+            className="h-12 rounded-none border-primary/35 px-8 text-[10px] font-light tracking-[0.32em] uppercase hover:border-primary hover:bg-primary hover:text-primary-foreground"
             onClick={() => setGalleryOpen(true)}
           >
             Galeria
