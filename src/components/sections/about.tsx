@@ -10,7 +10,7 @@ const features = [
   {
     icon: PersonIcon,
     title: "Um único ponto de contato",
-    text: "Uma equipe acompanhando todo o processo.",
+    text: "Uma equipe acompanhando todo o processo, do conceito à entrega da obra.",
   },
   {
     icon: PuzzleIcon,
