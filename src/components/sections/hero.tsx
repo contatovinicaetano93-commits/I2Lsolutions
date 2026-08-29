@@ -5,8 +5,22 @@ import { servicesNav } from "@/lib/site";
 
 export function Hero() {
   return (
-    <section id="inicio" className="relative min-h-svh bg-black">
-      <div className="grid min-h-svh lg:grid-cols-2">
+    <section id="inicio" className="relative min-h-svh overflow-hidden bg-black">
+      <div className="absolute inset-x-0 bottom-0 h-[52vh] lg:inset-y-0 lg:left-[36%] lg:h-auto">
+        <Image
+          src="/images/hero.jpg"
+          alt="Residência contemporânea ao entardecer"
+          fill
+          priority
+          sizes="(min-width: 1024px) 64vw, 100vw"
+          className="object-cover object-[center_40%] lg:object-center"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black via-black/55 via-[35%] to-transparent to-[70%] lg:bg-gradient-to-r lg:from-black lg:via-black/70 lg:via-[32%] lg:to-transparent lg:to-[62%]"
+        />
+      </div>
+      <div className="relative z-10 grid min-h-svh lg:grid-cols-2">
         <div className="flex flex-col justify-center px-6 pt-28 pb-16 sm:px-10 lg:px-16 lg:pt-32">
           <p className="mb-8 text-[11px] font-medium tracking-[0.32em] text-white/70 uppercase">
             01 — Primeira tela
@@ -44,16 +58,7 @@ export function Hero() {
             </WhatsAppButton>
           </div>
         </div>
-        <div className="relative min-h-[52vh] bg-black lg:min-h-svh">
-          <Image
-            src="/images/hero.jpg"
-            alt="Residência contemporânea ao entardecer"
-            fill
-            priority
-            sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover"
-          />
-        </div>
+        <div className="min-h-[52vh] lg:min-h-svh" />
       </div>
     </section>
   );
