@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Playfair_Display } from "next/font/google";
-import { SiteFooter } from "@/components/site-footer";
-import { SiteHeader } from "@/components/site-header";
-import { WhatsAppFloat } from "@/components/whatsapp-float";
+import {
+  SiteFooter,
+  SiteHeader,
+  WhatsAppFloat,
+} from "@/components/site-bundle";
 import "./globals.css";
 
 const geistSans = Geist({
