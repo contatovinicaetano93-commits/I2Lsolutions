@@ -1,30 +1,39 @@
 import Image from "next/image";
 import { Section } from "@/components/section";
+import { WhatsAppIcon } from "@/components/icons";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { messages, site } from "@/lib/site";
 
 export function Office() {
   return (
-    <Section id="escritorio" number="10" kicker="Nosso escritório" tone="sand">
+    <Section id="contato" number="06" kicker="Itaim Bibi" tone="sand">
       <div className="grid items-center gap-12 lg:grid-cols-2">
         <div>
           <h2 className="font-heading text-4xl leading-tight sm:text-5xl">
             Estamos no Itaim.
           </h2>
-          <p className="mt-6 max-w-md text-base leading-8 text-muted-foreground">
-            A I2L Solutions está localizada no Itaim Bibi, em São Paulo. Venha
-            conversar com a gente.
+          <p className="mt-6 max-w-md font-heading text-2xl leading-snug text-white/85 sm:text-3xl">
+            Vamos transformar sua ideia em projeto?
           </p>
-          <p className="mt-4 max-w-md text-sm leading-7 text-muted-foreground">
-            Agende um horário em nosso escritório e conheça de perto a I2L
-            Solutions.
+          <p className="mt-5 max-w-md text-base leading-8 text-muted-foreground">
+            A I2L Solutions está no Itaim Bibi, em São Paulo. Agende um horário
+            ou conte o que você precisa — nós cuidamos do processo.
           </p>
-          <p className="mt-8 text-[11px] font-light tracking-[0.22em] text-white/45 uppercase">
-            {site.city}
-          </p>
-          <WhatsAppButton className="mt-8" message={messages.schedule}>
-            Agendar horário
-          </WhatsAppButton>
+          <a
+            href={`https://wa.me/${site.whatsapp.e164}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 flex items-center gap-3 text-white/80 transition-colors hover:text-white"
+          >
+            <WhatsAppIcon className="size-8" />
+            <span className="text-lg font-light">{site.whatsapp.display}</span>
+          </a>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <WhatsAppButton message={messages.schedule}>
+              Agendar horário
+            </WhatsAppButton>
+            <WhatsAppButton variant="outline">Fale com a I2L</WhatsAppButton>
+          </div>
         </div>
         <div className="relative aspect-[4/3] overflow-hidden bg-muted">
           <Image

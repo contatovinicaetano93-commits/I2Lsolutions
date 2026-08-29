@@ -1,6 +1,6 @@
 export const site = {
   name: "I2L Solutions",
-  tagline: "Do conceito à entrega.",
+  tagline: "Do conceito à entrega da obra.",
   city: "Itaim Bibi, São Paulo",
   whatsapp: {
     e164: "5511989116464",
@@ -21,19 +21,17 @@ export const messages = {
 
 export const nav = [
   { href: "#a-i2l", label: "A I2L" },
-  { href: "#diferencial", label: "Diferencial" },
+  { href: "#compromisso", label: "Compromisso" },
   { href: "#servicos", label: "Soluções" },
   { href: "#projetos", label: "Projetos" },
-  { href: "#como-funciona", label: "Como funciona" },
-  { href: "#sobre", label: "Sobre" },
   { href: "#contato", label: "Contato" },
 ] as const;
 
 export const servicesNav = [
-  { href: "#servicos", label: "Projeto" },
   { href: "#servicos", label: "Interiores" },
-  { href: "#servicos", label: "Obra" },
+  { href: "#servicos", label: "Projeto" },
   { href: "#servicos", label: "Retrofit" },
+  { href: "#servicos", label: "Consultoria" },
 ] as const;
 
 export const projects = [

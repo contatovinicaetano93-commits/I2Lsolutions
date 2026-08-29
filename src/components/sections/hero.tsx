@@ -21,20 +21,17 @@ export function Hero() {
       </div>
       <div className="relative z-10 grid min-h-svh lg:grid-cols-2">
         <div className="flex flex-col justify-center px-6 pt-28 pb-16 sm:px-10 lg:px-16 lg:pt-32">
-          <p className="mb-10 text-[10px] font-light tracking-[0.42em] text-white/50 uppercase">
-            01 — Primeira tela
+          <p className="mb-8 text-[10px] font-light tracking-[0.42em] text-white/50 uppercase">
+            Iza & equipe
           </p>
-          <h1 className="font-heading text-5xl leading-[0.92] font-light tracking-tight text-white sm:text-7xl lg:text-[5.25rem]">
-            I2L Solutions
+          <h1 className="font-heading max-w-xl text-4xl leading-[1.05] font-light tracking-tight text-white sm:text-5xl lg:text-[3.4rem]">
+            Um único time para cuidar de todo o seu projeto.
           </h1>
           <p className="mt-8 max-w-xl text-[11px] font-light tracking-[0.28em] text-white/80 uppercase">
             Arquitetura. Interiores. Obra. Retrofit.
           </p>
-          <p className="mt-6 max-w-md font-heading text-2xl leading-snug font-light text-white/90 sm:text-[1.85rem]">
-            Um único time para cuidar de todo o seu projeto.
-          </p>
           <p className="mt-8 text-[11px] font-light tracking-[0.28em] text-white/45 uppercase">
-            Do conceito à entrega.
+            Do conceito à entrega da obra.
           </p>
           <div className="mt-12 flex flex-col gap-3 sm:flex-row">
             <Button

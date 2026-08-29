@@ -21,7 +21,7 @@ const pillars = [
 
 export function Commitment() {
   return (
-    <Section id="compromisso" number="04" kicker="Nosso compromisso" tone="sand">
+    <Section id="compromisso" number="03" kicker="Nosso compromisso" tone="sand">
       <h2 className="font-heading text-4xl leading-tight sm:text-5xl">
         Prazo. Qualidade. Previsibilidade.
       </h2>
