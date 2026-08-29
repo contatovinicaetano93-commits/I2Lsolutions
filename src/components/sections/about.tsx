@@ -6,9 +6,17 @@ import {
   LightbulbIcon,
   PencilRulerIcon,
   PersonIcon,
-  RetrofitIcon,
   ShieldIcon,
 } from "@/components/icons";
+
+const process = [
+  "Entendemos sua necessidade",
+  "Concepção dos projetos",
+  "Apresentação",
+  "Aprovação",
+  "Execução",
+  "Entrega",
+];
 
 const stages = [
   {
@@ -73,52 +81,56 @@ export function About() {
         o projeto funcionar como um só.
       </p>
 
-      <div className="mt-16 grid items-center gap-16 lg:grid-cols-[minmax(0,1fr)_16rem]">
-        <div className="hidden lg:block">
-          <div className="relative mx-auto aspect-square max-w-[540px]">
-            <div className="absolute inset-[20%] rounded-full border border-white/12" />
-            <div className="absolute inset-[31%] flex flex-col items-center justify-center rounded-full border border-white/20 text-center">
-              <p className="font-heading text-4xl tracking-[0.18em] text-white">
-                I2L
-              </p>
-              <p className="mt-2 max-w-[9rem] text-[10px] font-light tracking-[0.28em] text-white/50 uppercase">
-                Solução integrada
-              </p>
-            </div>
-            {stages.map((stage, index) => {
-              const angle = ((index * 60 - 90) * Math.PI) / 180;
-              const x = 50 + 41 * Math.cos(angle);
-              const y = 50 + 41 * Math.sin(angle);
-              return (
-                <div
-                  key={stage.n}
-                  className="absolute w-40 -translate-x-1/2 -translate-y-1/2 text-center"
-                  style={{ left: `${x}%`, top: `${y}%` }}
-                >
-                  <p className="text-[10px] font-light tracking-[0.28em] text-white/40">
-                    {stage.n}
-                  </p>
-                  <p className="font-heading mt-1 text-xl">{stage.title}</p>
-                </div>
-              );
-            })}
-          </div>
-          <p className="mt-8 text-center text-[11px] font-light tracking-[0.2em] text-white/35 uppercase">
-            O ciclo continua conforme novas necessidades do espaço
-          </p>
-        </div>
+      <ol className="mt-12 flex flex-col gap-4 border border-white/12 px-6 py-8 sm:px-8">
+        {process.map((step, index) => (
+          <li key={step} className="flex items-baseline gap-3">
+            <span className="text-[10px] font-light tracking-[0.28em] text-white/35">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+            <span className="font-heading text-xl leading-snug sm:text-2xl">
+              {step}
+            </span>
+            {index < process.length - 1 ? (
+              <span className="ml-auto hidden text-white/25 sm:inline" aria-hidden>
+                →
+              </span>
+            ) : null}
+          </li>
+        ))}
+      </ol>
 
-        <aside className="border border-white/12 px-6 py-8 lg:self-center">
-          <RetrofitIcon className="text-primary" />
-          <p className="mt-5 text-[10px] font-light tracking-[0.32em] text-white/45 uppercase">
-            Quando o espaço já existe
-          </p>
-          <h3 className="font-heading mt-3 text-3xl">Retrofit</h3>
-          <p className="mt-4 text-sm leading-7 text-muted-foreground">
-            Entra no ciclo se o espaço já existe. Não é uma etapa obrigatória
-            depois da obra.
-          </p>
-        </aside>
+      <div className="mt-16 hidden lg:block">
+        <div className="relative mx-auto aspect-square max-w-[540px]">
+          <div className="absolute inset-[20%] rounded-full border border-white/12" />
+          <div className="absolute inset-[31%] flex flex-col items-center justify-center rounded-full border border-white/20 text-center">
+            <p className="font-heading text-4xl tracking-[0.18em] text-white">
+              I2L
+            </p>
+            <p className="mt-2 max-w-[9rem] text-[10px] font-light tracking-[0.28em] text-white/50 uppercase">
+              Solução integrada
+            </p>
+          </div>
+          {stages.map((stage, index) => {
+            const angle = ((index * 60 - 90) * Math.PI) / 180;
+            const x = 50 + 41 * Math.cos(angle);
+            const y = 50 + 41 * Math.sin(angle);
+            return (
+              <div
+                key={stage.n}
+                className="absolute w-40 -translate-x-1/2 -translate-y-1/2 text-center"
+                style={{ left: `${x}%`, top: `${y}%` }}
+              >
+                <p className="text-[10px] font-light tracking-[0.28em] text-white/40">
+                  {stage.n}
+                </p>
+                <p className="font-heading mt-1 text-xl">{stage.title}</p>
+              </div>
+            );
+          })}
+        </div>
+        <p className="mt-8 text-center text-[11px] font-light tracking-[0.2em] text-white/35 uppercase">
+          O ciclo continua conforme novas necessidades do espaço
+        </p>
       </div>
 
       <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:hidden">

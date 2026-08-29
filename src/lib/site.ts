@@ -21,9 +21,9 @@ export const messages = {
 
 export const nav = [
   { href: "#a-i2l", label: "A I2L" },
-  { href: "#compromisso", label: "Compromisso" },
-  { href: "#servicos", label: "Soluções" },
+  { href: "#compromisso", label: "Garantimos" },
   { href: "#projetos", label: "Projetos" },
+  { href: "#servicos", label: "Soluções" },
   { href: "#contato", label: "Contato" },
 ] as const;
 
