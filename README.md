@@ -2,6 +2,14 @@
 
 Site institucional da **I2L Solutions**, escritório de arquitetura de Isa Luiza Lopes no Itaim Bibi, São Paulo. Uma página só: da apresentação da solução 360° ao WhatsApp.
 
+## Produção
+
+O site público está em **[https://i2lsolutions.vercel.app](https://i2lsolutions.vercel.app)**.
+
+O código está no GitHub: [contatovinicaetano93-commits/I2Lsolutions](https://github.com/contatovinicaetano93-commits/I2Lsolutions).
+
+Não use `i2-lsolutions.vercel.app` — esse projeto antigo na Vercel ficou com o deploy Git em 404.
+
 ## Stack
 
 - Next.js (App Router) + TypeScript
