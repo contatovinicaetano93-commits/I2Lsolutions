@@ -1,6 +1,6 @@
 # I2L Solutions
 
-Site institucional da **I2L Solutions**, escritório de arquitetura de Iza Luiza Lopes no Itaim Bibi, São Paulo.
+Site institucional da **I2L Solutions**, escritório de arquitetura de Iza Luiza Lopes. A base fica no Itaim Bibi, em São Paulo; o atendimento cobre todo o Brasil.
 
 ## Produção
 

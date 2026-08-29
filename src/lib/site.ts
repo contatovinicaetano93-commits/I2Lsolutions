@@ -16,7 +16,7 @@ export const whatsappHref = (message: string) =>
 export const messages = {
   talk: "Olá, Iza. Gostaria de conversar sobre um projeto com a I2L Solutions.",
   schedule:
-    "Olá, Iza. Gostaria de agendar um horário no escritório da I2L, no Itaim Bibi.",
+    "Olá, Iza. Gostaria de agendar uma conversa com a I2L Solutions.",
 };
 
 export const nav = [
