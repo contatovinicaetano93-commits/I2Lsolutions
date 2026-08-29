@@ -12,7 +12,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { nav } from "@/lib/site";
+import { nav, messages } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
@@ -40,19 +40,28 @@ export function SiteHeader() {
             <a
               key={item.href}
               href={item.href}
-              className="text-[10px] font-medium tracking-[0.22em] text-white/75 uppercase transition-colors hover:text-white xl:text-[11px]"
+              className="text-[10px] font-light tracking-[0.26em] text-white/55 uppercase transition-colors duration-500 hover:text-white xl:text-[11px]"
             >
               {item.label}
             </a>
           ))}
         </nav>
+        <div className="ml-auto hidden lg:block">
+          <WhatsAppButton
+            message={messages.schedule}
+            variant="outline"
+            className="h-10 min-w-0 px-6"
+          >
+            Agendar horário
+          </WhatsAppButton>
+        </div>
         <div className="ml-auto lg:hidden">
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button
                 variant="outline"
                 size="icon"
-                className="rounded-none border-white/30 bg-transparent text-white hover:bg-white hover:text-black"
+                className="rounded-none border-white/25 bg-transparent text-white hover:bg-white hover:text-black"
                 aria-label="Abrir menu"
               >
                 <Menu className="size-4" />
@@ -69,7 +78,7 @@ export function SiteHeader() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="text-sm tracking-[0.18em] text-white uppercase"
+                    className="text-sm font-light tracking-[0.22em] text-white uppercase"
                   >
                     {item.label}
                   </a>

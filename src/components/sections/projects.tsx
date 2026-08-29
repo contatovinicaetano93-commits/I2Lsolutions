@@ -21,26 +21,29 @@ export function Projects() {
   return (
     <Section id="projetos" number="06" kicker="Projetos" tone="sand">
       <h2 className="font-heading max-w-3xl text-4xl leading-tight sm:text-5xl">
-        Nossos projetos. Cada projeto, uma solução.
+        Projetos selecionados.
       </h2>
-      <div className="mt-8 flex flex-wrap gap-2">
+      <p className="mt-4 font-heading text-xl italic text-white/60 sm:text-2xl">
+        Cada projeto, uma solução.
+      </p>
+      <div className="mt-10 flex flex-wrap gap-2">
         {projects.map((item, index) => (
           <button
             key={item.slug}
             type="button"
             onClick={() => setActive(index)}
             className={cn(
-              "border px-4 py-2 text-[11px] tracking-[0.18em] uppercase transition-colors",
+              "border px-5 py-2.5 text-[10px] font-light tracking-[0.24em] uppercase transition-all duration-500",
               index === active
-                ? "border-primary bg-primary text-primary-foreground"
-                : "border-border bg-transparent text-foreground hover:border-primary",
+                ? "border-white bg-white text-black"
+                : "border-white/20 bg-transparent text-white/70 hover:border-white/60 hover:text-white",
             )}
           >
             {item.name}
           </button>
         ))}
       </div>
-      <div className="mt-10 grid items-start gap-10 lg:grid-cols-2">
+      <div className="mt-12 grid items-center gap-12 lg:grid-cols-2">
         <div className="relative aspect-square overflow-hidden bg-muted">
           <Image
             src={project.images[0]}
@@ -53,37 +56,23 @@ export function Projects() {
         </div>
         <div className="space-y-6">
           <div>
-            <p className="text-[11px] tracking-[0.24em] text-primary uppercase">
-              Projeto
+            <h3 className="font-heading text-4xl">{project.name}</h3>
+            <p className="mt-3 text-[11px] font-light tracking-[0.22em] text-white/50 uppercase">
+              {project.place}
             </p>
-            <h3 className="font-heading mt-1 text-3xl">{project.name}</h3>
-          </div>
-          <dl className="space-y-3 text-sm">
-            <div className="flex gap-4 border-b border-border pb-3">
-              <dt className="w-28 text-muted-foreground">Local</dt>
-              <dd>{project.location}</dd>
-            </div>
-            <div className="flex gap-4 border-b border-border pb-3">
-              <dt className="w-28 text-muted-foreground">Tipo</dt>
-              <dd>{project.type}</dd>
-            </div>
-            <div className="flex gap-4 border-b border-border pb-3">
-              <dt className="w-28 text-muted-foreground">Serviços</dt>
-              <dd>{project.services}</dd>
-            </div>
-          </dl>
-          <div>
-            <p className="text-[11px] tracking-[0.24em] text-primary uppercase">
-              Sobre o projeto
+            <p className="mt-2 text-[11px] font-light tracking-[0.22em] text-white/70 uppercase">
+              {project.services}
             </p>
-            <p className="mt-3 leading-7 text-muted-foreground">{project.about}</p>
           </div>
+          <p className="max-w-md text-sm leading-7 text-muted-foreground">
+            {project.about}
+          </p>
           <Button
             variant="outline"
-            className="h-11 rounded-none border-primary px-5 text-[11px] tracking-[0.2em] uppercase"
+            className="h-12 rounded-none border-white/35 px-8 text-[10px] font-light tracking-[0.32em] uppercase hover:border-white hover:bg-white hover:text-black"
             onClick={() => setGalleryOpen(true)}
           >
-            Galeria de imagens e renders
+            Galeria
           </Button>
         </div>
       </div>

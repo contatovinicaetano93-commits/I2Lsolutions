@@ -9,7 +9,7 @@ export function SiteFooter() {
           <Logo />
           <p className="max-w-xs text-sm text-muted-foreground">{site.tagline}</p>
         </div>
-        <nav className="flex flex-wrap gap-x-6 gap-y-2 text-[11px] tracking-[0.22em] text-foreground/70 uppercase">
+        <nav className="flex flex-wrap gap-x-6 gap-y-2 text-[10px] font-light tracking-[0.26em] text-white/50 uppercase">
           {servicesNav.map((item) => (
             <a key={item.label} href={item.href} className="hover:text-primary">
               {item.label}

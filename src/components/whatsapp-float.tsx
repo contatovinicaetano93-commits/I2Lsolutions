@@ -9,7 +9,7 @@ export function WhatsAppFloat() {
       href={whatsappHref(messages.talk)}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed right-5 bottom-5 z-40 flex size-14 items-center justify-center rounded-full bg-white text-black shadow-lg transition hover:bg-white/90 sm:right-8 sm:bottom-8"
+      className="fixed right-5 bottom-5 z-40 flex size-14 items-center justify-center rounded-full border border-white/20 bg-white text-black transition-all duration-500 hover:bg-transparent hover:text-white sm:right-8 sm:bottom-8"
       aria-label="Conversar no WhatsApp"
     >
       <WhatsAppIcon className="size-7" />

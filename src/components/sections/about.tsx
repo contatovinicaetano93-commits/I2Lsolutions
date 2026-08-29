@@ -10,22 +10,22 @@ const features = [
   {
     icon: PersonIcon,
     title: "Um único ponto de contato",
-    text: "Você fala com a I2L. Nós coordenamos projeto, interiores, obra e retrofit.",
+    text: "Uma equipe acompanhando todo o processo.",
   },
   {
     icon: PuzzleIcon,
-    title: "Etapas integradas",
-    text: "Cada fase conversa com a seguinte. Menos ruído, menos retrabalho.",
+    title: "Todas as etapas integradas",
+    text: "Do conceito à entrega.",
   },
   {
     icon: ClockIcon,
-    title: "Mais tempo para o que importa",
-    text: "Você decide. A I2L organiza o processo e acompanha o andamento.",
+    title: "Mais tempo para você",
+    text: "Nós cuidamos do processo para você.",
   },
   {
     icon: ShieldIcon,
     title: "Mais controle e tranquilidade",
-    text: "Prazo, qualidade e custo no mesmo contrato, com a mesma equipe.",
+    text: "Planejamento, acompanhamento e execução.",
   },
 ];
 
@@ -35,17 +35,16 @@ export function About() {
       <h2 className="font-heading max-w-2xl text-4xl leading-tight sm:text-5xl">
         Tudo em um só lugar.
       </h2>
-      <p className="mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">
-        A I2L Solutions nasceu para ser a solução 360° do seu projeto: da ideia
-        inicial à chave na mão, com arquitetura, interiores, obra e retrofit
-        sob o mesmo olhar.
+      <p className="mt-6 max-w-xl text-base leading-8 text-muted-foreground sm:text-lg">
+        A I2L Solutions integra todas as etapas do projeto e da obra em uma
+        única solução.
       </p>
-      <div className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-16 grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
         {features.map((item) => (
-          <article key={item.title} className="space-y-4">
+          <article key={item.title} className="space-y-4 border-t border-white/10 pt-6">
             <item.icon className="text-primary" />
-            <h3 className="font-heading text-xl">{item.title}</h3>
-            <p className="text-sm leading-6 text-muted-foreground">{item.text}</p>
+            <h3 className="font-heading text-2xl">{item.title}</h3>
+            <p className="text-sm leading-7 text-muted-foreground">{item.text}</p>
           </article>
         ))}
       </div>

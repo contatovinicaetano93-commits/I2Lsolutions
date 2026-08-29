@@ -2,39 +2,32 @@ import { Section } from "@/components/section";
 
 export function Founder() {
   return (
-    <Section id="sobre" number="08" kicker="Sobre Isa Luiza Lopes" tone="sand">
-      <h2 className="font-heading max-w-3xl text-4xl leading-tight sm:text-5xl">
-        A visão por trás da I2L Solutions.
-      </h2>
-      <div className="mt-10 max-w-3xl space-y-5 text-base leading-8 text-muted-foreground">
-        <p>
-          Isa Luiza Lopes é arquiteta formada pela Universidade Presbiteriana
-          Mackenzie, com especialização em design de interiores pelo Istituto
-          Marangoni. A formação em São Paulo e em Milão moldou um olhar que
-          une técnica, materialidade e o cotidiano de quem vai viver o espaço.
-        </p>
-        <p>
-          A I2L Solutions nasce dessa convicção: o cliente não deveria
-          fragmentar o próprio projeto entre escritórios, fornecedores e
-          frentes de obra. Arquitetura, interiores, execução e retrofit
-          funcionam melhor quando falam a mesma língua — e respondem a uma
-          única equipe.
-        </p>
-        <p>
-          O trabalho da Isa é filtrar experiências, entender o mercado e
-          transformar o que foi aprendido em um processo mais claro, mais
-          previsível e mais humano para quem constrói ou transforma um espaço.
-        </p>
+    <Section id="sobre" number="08" kicker="Sobre Iza Luiza" tone="sand">
+      <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+        <div>
+          <h2 className="font-heading max-w-xl text-4xl leading-tight sm:text-5xl">
+            A visão por trás da I2L.
+          </h2>
+          <p className="mt-10 font-heading text-4xl sm:text-5xl">Iza Luiza Lopes</p>
+          <p className="mt-3 text-[11px] font-light tracking-[0.28em] text-white/50 uppercase">
+            Arquiteta · Design de interiores
+          </p>
+        </div>
+        <div className="max-w-md space-y-5 text-sm leading-7 text-muted-foreground sm:text-base">
+          <p>
+            A I2L Solutions nasceu da visão de integrar arquitetura, interiores e
+            execução em um único processo.
+          </p>
+          <p>
+            Com experiência em diferentes etapas do desenvolvimento de projetos,
+            Iza Luiza criou uma forma de trabalhar baseada em proximidade,
+            organização e atenção aos detalhes.
+          </p>
+        </div>
       </div>
-      <blockquote className="mt-12 bg-primary px-8 py-10 text-primary-foreground sm:px-12">
-        <p className="font-heading text-2xl leading-snug sm:text-3xl">
-          “Filtrar experiências, entender o mercado e transformar aprendizados
-          em soluções melhores para o cliente.”
-        </p>
-        <footer className="mt-6 text-[11px] tracking-[0.22em] uppercase">
-          Isa Luiza Lopes · I2L Solutions
-        </footer>
-      </blockquote>
+      <p className="mt-16 max-w-2xl border-l border-white/25 pl-6 font-heading text-2xl leading-snug text-white/90 sm:text-3xl">
+        Uma visão integrada para transformar necessidades em soluções.
+      </p>
     </Section>
   );
 }

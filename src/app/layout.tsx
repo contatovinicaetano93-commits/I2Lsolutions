@@ -1,32 +1,31 @@
 import type { Metadata } from "next";
-import { Geist, Playfair_Display } from "next/font/google";
-import {
-  SiteFooter,
-  SiteHeader,
-  WhatsAppFloat,
-} from "@/components/site-bundle";
+import { Cormorant_Garamond, Outfit } from "next/font/google";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
+import { WhatsAppFloat } from "@/components/whatsapp-float";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
+  weight: ["300", "400", "500"],
 });
 
-const playfair = Playfair_Display({
+const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
   subsets: ["latin"],
   style: ["normal", "italic"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600"],
 });
 
 export const metadata: Metadata = {
-  title: "I2L Solutions | Arquitetura 360° em São Paulo",
+  title: "I2L Solutions | Arquitetura em São Paulo",
   description:
-    "I2L Solutions — uma solução 360° para o seu projeto. Arquitetura, interiores, obra e retrofit em um único ponto de contato. Escritório no Itaim Bibi, São Paulo.",
+    "I2L Solutions — arquitetura, interiores, obra e retrofit em um único time. Do conceito à entrega, no Itaim Bibi, São Paulo.",
   openGraph: {
-    title: "I2L Solutions | Arquitetura 360° em São Paulo",
+    title: "I2L Solutions | Arquitetura em São Paulo",
     description:
-      "Você ganha tempo. A I2L cuida de todas as etapas — da concepção à entrega.",
+      "Um único time para cuidar de todo o seu projeto. Do conceito à entrega.",
     locale: "pt_BR",
     type: "website",
   },
@@ -36,10 +35,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="pt-BR"
-      className={`${geistSans.variable} ${playfair.variable} h-full scroll-smooth antialiased`}
+      className={`${outfit.variable} ${cormorant.variable} h-full scroll-smooth antialiased`}
       style={{ colorScheme: "dark" }}
     >
-      <body className="flex min-h-full flex-col bg-background font-sans text-foreground">
+      <body className="flex min-h-full flex-col bg-background font-sans font-light text-foreground">
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />

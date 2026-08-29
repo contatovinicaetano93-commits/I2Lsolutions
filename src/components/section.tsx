@@ -28,7 +28,7 @@ export function Section({
       )}
     >
       <div className="mx-auto max-w-6xl">
-        <p className="mb-6 flex items-center gap-3 text-[11px] font-medium tracking-[0.32em] text-primary uppercase">
+        <p className="mb-8 flex items-center gap-3 text-[10px] font-light tracking-[0.36em] text-white/45 uppercase">
           <span>{number}</span>
           <span className="h-px w-8 bg-primary/50" />
           <span>{kicker}</span>

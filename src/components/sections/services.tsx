@@ -10,37 +10,39 @@ const services = [
   {
     icon: ArchitectureIcon,
     title: "Arquitetura",
-    text: "Projetos personalizados, da implantação ao detalhamento, alinhados ao modo de viver de cada cliente.",
+    text: "Projetos personalizados que unem estética, funcionalidade e identidade.",
   },
   {
     icon: ArmchairIcon,
     title: "Design de interiores",
-    text: "Layouts, iluminação, materiais e detalhes que transformam o espaço em ambiente.",
+    text: "Ambientes completos, pensados em cada detalhe, dos materiais ao layout.",
   },
   {
     icon: HelmetIcon,
     title: "Obras",
-    text: "Execução e acompanhamento de etapas, com a mesma equipe que desenhou o projeto.",
+    text: "Execução e acompanhamento para transformar o projeto em realidade.",
   },
   {
     icon: RetrofitIcon,
     title: "Retrofit",
-    text: "Modernização de espaços existentes, preservando a essência e atualizando o uso.",
+    text: "Transformação e modernização de espaços existentes, criando novas possibilidades sem perder sua essência.",
   },
 ];
 
 export function Services() {
   return (
-    <Section id="servicos" number="05" kicker="Serviços">
+    <Section id="servicos" number="05" kicker="Soluções I2L">
       <h2 className="font-heading max-w-3xl text-4xl leading-tight sm:text-5xl">
-        Soluções para cada etapa do seu projeto.
+        Soluções I2L
       </h2>
-      <div className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
         {services.map((item) => (
-          <article key={item.title} className="border-t border-primary/30 pt-6">
+          <article key={item.title} className="border-t border-white/15 pt-7">
             <item.icon className="text-primary" />
-            <h3 className="font-heading mt-5 text-2xl">{item.title}</h3>
-            <p className="mt-3 text-sm leading-6 text-muted-foreground">{item.text}</p>
+            <h3 className="font-heading mt-6 text-2xl">{item.title}</h3>
+            <p className="mt-4 text-sm leading-7 text-muted-foreground">
+              {item.text}
+            </p>
           </article>
         ))}
       </div>

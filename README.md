@@ -1,6 +1,6 @@
 # I2L Solutions
 
-Site institucional da **I2L Solutions**, escritório de arquitetura de Isa Luiza Lopes no Itaim Bibi, São Paulo. Uma página só: da apresentação da solução 360° ao WhatsApp.
+Site institucional da **I2L Solutions**, escritório de arquitetura de Iza Luiza Lopes no Itaim Bibi, São Paulo.
 
 ## Produção
 

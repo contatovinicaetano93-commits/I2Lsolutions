@@ -1,6 +1,6 @@
 export const site = {
   name: "I2L Solutions",
-  tagline: "Uma solução 360° para a sua necessidade.",
+  tagline: "Do conceito à entrega.",
   city: "Itaim Bibi, São Paulo",
   whatsapp: {
     e164: "5511989116464",
@@ -14,15 +14,15 @@ export const whatsappHref = (message: string) =>
   `https://wa.me/${site.whatsapp.e164}?text=${encodeURIComponent(message)}`;
 
 export const messages = {
-  talk: "Olá, Isa. Gostaria de conversar sobre um projeto com a I2L Solutions.",
+  talk: "Olá, Iza. Gostaria de conversar sobre um projeto com a I2L Solutions.",
   schedule:
-    "Olá, Isa. Gostaria de agendar um horário no escritório da I2L, no Itaim Bibi.",
+    "Olá, Iza. Gostaria de agendar um horário no escritório da I2L, no Itaim Bibi.",
 };
 
 export const nav = [
   { href: "#a-i2l", label: "A I2L" },
   { href: "#diferencial", label: "Diferencial" },
-  { href: "#servicos", label: "Serviços" },
+  { href: "#servicos", label: "Soluções" },
   { href: "#projetos", label: "Projetos" },
   { href: "#como-funciona", label: "Como funciona" },
   { href: "#sobre", label: "Sobre" },
@@ -40,11 +40,12 @@ export const projects = [
   {
     slug: "residencia-jardins",
     name: "Residência Jardins",
+    place: "São Paulo · Residencial",
     location: "Jardins, São Paulo",
     type: "Residencial",
     services: "Arquitetura · Interiores · Obra",
     about:
-      "Uma casa pensada para o cotidiano da família, com circulação clara, luz natural e materiais que envelhecem bem. O projeto uniu arquitetura e interiores desde a concepção, para que cada ambiente chegasse à obra sem retrabalho.",
+      "Casa familiar com arquitetura e interiores desenhados juntos, da planta à obra.",
     images: [
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80",
       "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80",
@@ -54,11 +55,12 @@ export const projects = [
   {
     slug: "apartamento-itaim",
     name: "Apartamento Itaim",
+    place: "São Paulo · Residencial",
     location: "Itaim Bibi, São Paulo",
     type: "Residencial · Retrofit",
     services: "Interiores · Retrofit",
     about:
-      "Releitura de um apartamento existente: a planta foi reorganizada, a iluminação redesenhada e os acabamentos atualizados sem perder a essência do imóvel. O retrofit aconteceu com a família no radar de prazo e custo.",
+      "Releitura de um apartamento existente: planta, luz e acabamentos atualizados.",
     images: [
       "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80",
       "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=80",
@@ -68,11 +70,12 @@ export const projects = [
   {
     slug: "casa-campo",
     name: "Casa de Campo",
+    place: "São Paulo · Residencial",
     location: "Interior de São Paulo",
     type: "Residencial",
     services: "Arquitetura · Interiores",
     about:
-      "Um refúgio de fim de semana com relação direta com a paisagem. Os espaços internos e externos foram desenhados juntos, com materiais honestos e uma paleta que conversa com o entorno.",
+      "Refúgio de fim de semana, com interiores e paisagem no mesmo desenho.",
     images: [
       "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80",
       "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdbc?auto=format&fit=crop&w=1600&q=80",

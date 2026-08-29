@@ -17,13 +17,13 @@ export function WhatsAppButton({
     <Button
       asChild
       className={cn(
-        "h-12 rounded-none px-7 text-[11px] font-medium tracking-[0.22em] uppercase",
+        "h-12 min-w-[11.5rem] rounded-none px-8 text-[10px] font-light tracking-[0.32em] uppercase",
         variant === "solid" &&
-          "bg-primary text-primary-foreground hover:bg-primary/90",
+          "border border-white bg-white text-black hover:bg-transparent hover:text-white",
         variant === "outline" &&
-          "border-foreground/70 bg-transparent text-foreground hover:bg-foreground hover:text-background",
+          "border-white/35 bg-transparent text-white hover:border-white hover:bg-white hover:text-black",
         variant === "light" &&
-          "border-background/70 bg-transparent text-background hover:bg-background hover:text-foreground",
+          "border-white/35 bg-transparent text-white hover:border-white hover:bg-white hover:text-black",
         className,
       )}
       variant={variant === "solid" ? "default" : "outline"}
