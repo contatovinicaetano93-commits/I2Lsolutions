@@ -25,7 +25,7 @@ Abra [http://localhost:43211](http://localhost:43211) se o servidor foi iniciado
 
 ## Contato (CTA)
 
-Todos os botões **Fale conosco** e **Agendar horário** abrem o WhatsApp:
+O botão **Agendar** no header e o **Agendar horário** no final da página abrem o WhatsApp. No hero, **Fale conosco** é um link de texto para o mesmo número.
 
 - Número: **(11) 98911-6464**
 - Link: `https://wa.me/5511989116464`
@@ -34,7 +34,14 @@ E-mail e Instagram ficam em `src/lib/site.ts`. Quando existirem, basta preencher
 
 ## Conteúdo
 
-Textos, projetos em destaque e o número de WhatsApp estão em `src/lib/site.ts`. As fotos atuais são de referência (Unsplash) até a I2L enviar o acervo próprio e os dados reais de cada obra.
+Textos, projetos e o WhatsApp ficam em `src/lib/site.ts`.
+
+As fotos atuais (hero à parte) são de referência. Quando o acervo da I2L estiver pronto:
+
+1. Coloque as imagens em `public/images/projetos/`
+2. Troque as URLs em `projects[].images` por caminhos locais, por exemplo `/images/projetos/jardins-01.jpg`
+3. Atualize nome, bairro e o texto curto de cada obra no mesmo arquivo
+4. A foto do hero está em `public/images/hero.jpg`
 
 ## Scripts
 

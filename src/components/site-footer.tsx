@@ -1,23 +1,24 @@
 import { Logo } from "@/components/logo";
-import { site, servicesNav } from "@/lib/site";
+import { site } from "@/lib/site";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border bg-background px-6 py-12 sm:px-10 lg:px-16">
-      <div className="mx-auto flex max-w-6xl flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
-        <div className="space-y-3">
+    <footer className="border-t border-white/10 bg-background px-6 py-10 sm:px-10 lg:px-16">
+      <div className="mx-auto flex max-w-5xl flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <div className="space-y-2">
           <Logo />
-          <p className="max-w-xs text-sm text-muted-foreground">{site.tagline}</p>
+          <p className="text-sm text-muted-foreground">{site.tagline}</p>
         </div>
-        <nav className="flex flex-wrap gap-x-6 gap-y-2 text-[10px] font-light tracking-[0.26em] text-foreground/50 uppercase">
-          {servicesNav.map((item) => (
-            <a key={item.label} href={item.href} className="hover:text-primary">
-              {item.label}
-            </a>
-          ))}
-        </nav>
+        <a
+          href={`https://wa.me/${site.whatsapp.e164}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-foreground/70 hover:text-foreground"
+        >
+          {site.whatsapp.display}
+        </a>
       </div>
-      <p className="mx-auto mt-10 max-w-6xl text-xs text-muted-foreground">
+      <p className="mx-auto mt-8 max-w-5xl text-xs text-muted-foreground">
         © {new Date().getFullYear()} I2L Solutions. Itaim Bibi, São Paulo.
         Atendimento em todo o Brasil.
       </p>

@@ -1,9 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Section } from "@/components/section";
-import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -15,65 +14,90 @@ import { cn } from "@/lib/utils";
 
 export function Projects() {
   const [active, setActive] = useState(0);
+  const [shot, setShot] = useState(0);
   const [galleryOpen, setGalleryOpen] = useState(false);
   const project = projects[active];
 
+  useEffect(() => {
+    setShot(0);
+  }, [active]);
+
   return (
-    <Section id="projetos" number="04" kicker="Projetos" tone="sand">
-      <h2 className="font-heading max-w-3xl text-4xl leading-tight sm:text-5xl">
-        Projetos selecionados.
-      </h2>
-      <p className="mt-4 font-heading text-xl italic text-foreground/60 sm:text-2xl">
-        Cada projeto, uma solução.
-      </p>
-      <div className="mt-10 flex flex-wrap gap-2">
-        {projects.map((item, index) => (
+    <Section id="projetos" width="wide">
+      <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+        <div className="lg:col-span-8">
           <button
-            key={item.slug}
             type="button"
-            onClick={() => setActive(index)}
-            className={cn(
-              "border px-5 py-2.5 text-[10px] font-light tracking-[0.24em] uppercase transition-all duration-500",
-              index === active
-                ? "border-primary bg-primary text-primary-foreground"
-                : "border-primary/20 bg-transparent text-foreground/70 hover:border-primary/60 hover:text-foreground",
-            )}
+            onClick={() => setGalleryOpen(true)}
+            className="group relative block aspect-[4/3] w-full overflow-hidden bg-muted text-left"
+            aria-label={`Abrir galeria de ${project.name}`}
           >
-            {item.name}
+            <Image
+              src={project.images[shot]}
+              alt={project.name}
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+              sizes="(min-width: 1024px) 60vw, 100vw"
+              priority={active === 0}
+            />
           </button>
-        ))}
-      </div>
-      <div className="mt-12 grid items-center gap-12 lg:grid-cols-2">
-        <div className="relative aspect-square overflow-hidden bg-muted">
-          <Image
-            src={project.images[0]}
-            alt={project.name}
-            fill
-            className="object-cover"
-            sizes="(min-width: 1024px) 50vw, 100vw"
-            priority={active === 0}
-          />
+          <div className="mt-3 grid grid-cols-3 gap-3">
+            {project.images.map((src, index) => (
+              <button
+                key={src}
+                type="button"
+                onClick={() => setShot(index)}
+                className={cn(
+                  "relative aspect-[4/3] overflow-hidden bg-muted",
+                  index === shot ? "ring-1 ring-primary" : "opacity-70 hover:opacity-100",
+                )}
+                aria-label={`Ver foto ${index + 1} de ${project.name}`}
+              >
+                <Image
+                  src={src}
+                  alt=""
+                  fill
+                  className="object-cover"
+                  sizes="20vw"
+                />
+              </button>
+            ))}
+          </div>
         </div>
-        <div className="space-y-6">
-          <div>
-            <h3 className="font-heading text-4xl">{project.name}</h3>
-            <p className="mt-3 text-[11px] font-light tracking-[0.22em] text-foreground/50 uppercase">
+
+        <div className="flex flex-col lg:col-span-4">
+          <p className="text-sm text-foreground/55">Projetos</p>
+          <h2 className="font-heading mt-3 text-4xl leading-tight">
+            Projetos selecionados.
+          </h2>
+          <ul className="mt-10 space-y-3">
+            {projects.map((item, index) => (
+              <li key={item.slug}>
+                <button
+                  type="button"
+                  onClick={() => setActive(index)}
+                  className={cn(
+                    "text-left text-base transition-colors",
+                    index === active
+                      ? "text-foreground"
+                      : "text-muted-foreground hover:text-foreground",
+                  )}
+                >
+                  {item.name}
+                </button>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-auto border-t border-white/10 pt-8 lg:mt-16">
+            <h3 className="font-heading text-3xl">{project.name}</h3>
+            <p className="mt-3 text-sm text-muted-foreground">
               {project.place}
             </p>
-            <p className="mt-2 text-[11px] font-light tracking-[0.22em] text-foreground/70 uppercase">
-              {project.services}
+            <p className="mt-1 text-sm text-muted-foreground">{project.services}</p>
+            <p className="mt-5 text-sm leading-7 text-muted-foreground">
+              {project.about}
             </p>
           </div>
-          <p className="max-w-md text-sm leading-7 text-muted-foreground">
-            {project.about}
-          </p>
-          <Button
-            variant="outline"
-            className="h-12 rounded-none border-primary/35 px-8 text-[10px] font-light tracking-[0.32em] uppercase hover:border-primary hover:bg-primary hover:text-primary-foreground"
-            onClick={() => setGalleryOpen(true)}
-          >
-            Galeria
-          </Button>
         </div>
       </div>
 

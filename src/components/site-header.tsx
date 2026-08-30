@@ -33,14 +33,14 @@ export function SiteHeader() {
         scrolled ? "bg-black/95" : "bg-transparent",
       )}
     >
-      <div className="flex h-20 items-center px-6 sm:px-10 lg:px-16">
+      <div className="flex h-16 items-center px-6 sm:h-20 sm:px-10 lg:px-16">
         <Logo />
-        <nav className="ml-8 hidden items-center gap-6 lg:flex xl:ml-12 xl:gap-7">
+        <nav className="ml-10 hidden items-center gap-8 lg:flex">
           {nav.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-[10px] font-light tracking-[0.26em] text-foreground/55 uppercase transition-colors duration-500 hover:text-foreground xl:text-[11px]"
+              className="text-sm text-foreground/60 transition-colors hover:text-foreground"
             >
               {item.label}
             </a>
@@ -50,9 +50,9 @@ export function SiteHeader() {
           <WhatsAppButton
             message={messages.schedule}
             variant="outline"
-            className="h-10 min-w-0 px-6"
+            className="h-9 min-w-0 px-4"
           >
-            Agendar horário
+            Agendar
           </WhatsAppButton>
         </div>
         <div className="ml-auto lg:hidden">
@@ -78,7 +78,7 @@ export function SiteHeader() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="text-sm font-light tracking-[0.22em] text-foreground uppercase"
+                    className="text-lg text-foreground"
                   >
                     {item.label}
                   </a>

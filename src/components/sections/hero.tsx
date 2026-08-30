@@ -1,49 +1,53 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { WhatsAppButton } from "@/components/whatsapp-button";
+import { whatsappHref, messages } from "@/lib/site";
 
 export function Hero() {
   return (
     <section id="inicio" className="relative min-h-svh overflow-hidden bg-black">
-      <div className="absolute inset-x-0 bottom-0 h-[52vh] lg:inset-y-0 lg:left-[36%] lg:h-auto">
+      <div className="absolute inset-x-0 bottom-0 h-[52vh] lg:inset-y-0 lg:left-[42%] lg:h-auto">
         <Image
           src="/images/hero.jpg"
           alt="Residência contemporânea ao entardecer"
           fill
           priority
-          sizes="(min-width: 1024px) 64vw, 100vw"
+          sizes="(min-width: 1024px) 58vw, 100vw"
           className="object-cover object-[center_40%] lg:object-center"
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black via-black/55 via-[35%] to-transparent to-[70%] lg:bg-gradient-to-r lg:from-black lg:via-black/70 lg:via-[32%] lg:to-transparent lg:to-[62%]"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black via-black/50 via-[30%] to-transparent to-[68%] lg:bg-gradient-to-r lg:from-black lg:via-black/75 lg:via-[28%] lg:to-transparent lg:to-[58%]"
         />
       </div>
-      <div className="relative z-10 grid min-h-svh lg:grid-cols-2">
-        <div className="flex flex-col justify-center px-6 pt-28 pb-16 sm:px-10 lg:px-16 lg:pt-32">
-          <p className="mb-5 text-[11px] font-light tracking-[0.28em] text-foreground/80 uppercase">
-            Arquitetura – Interiores – Obra – Retrofit
+      <div className="relative z-10 grid min-h-svh lg:grid-cols-12">
+        <div className="flex flex-col justify-center px-6 pt-28 pb-16 sm:px-10 lg:col-span-6 lg:px-16 lg:pt-32">
+          <p className="mb-8 text-sm text-foreground/70">
+            Arquitetura, interiores, obra e retrofit
           </p>
-          <p className="mb-8 text-[10px] font-light tracking-[0.42em] text-foreground/50 uppercase">
-            Iza & equipe
-          </p>
-          <h1 className="font-heading max-w-xl text-4xl leading-[1.05] font-light tracking-tight text-foreground sm:text-5xl lg:text-[3.4rem]">
+          <h1 className="font-heading max-w-xl text-4xl leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.25rem]">
             Um único time para cuidar de todo o seu projeto.
           </h1>
-          <p className="mt-8 text-[11px] font-light tracking-[0.28em] text-foreground/45 uppercase">
-            Do conceito à entrega da obra.
+          <p className="mt-6 max-w-md text-base leading-7 text-muted-foreground">
+            Iza e equipe. Do conceito à entrega da obra.
           </p>
-          <div className="mt-12 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
             <Button
               asChild
-              className="h-12 min-w-[11.5rem] rounded-none border border-primary bg-primary px-8 text-[10px] font-light tracking-[0.32em] text-primary-foreground uppercase hover:bg-transparent hover:text-primary"
+              className="h-11 rounded-none border border-primary bg-primary px-7 text-sm font-normal text-primary-foreground hover:bg-transparent hover:text-primary"
             >
               <a href="#a-i2l">Conheça a I2L</a>
             </Button>
-            <WhatsAppButton variant="outline">Fale conosco</WhatsAppButton>
+            <a
+              href={whatsappHref(messages.talk)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-foreground underline decoration-foreground/30 underline-offset-4 hover:decoration-foreground"
+            >
+              Fale conosco
+            </a>
           </div>
         </div>
-        <div className="min-h-[52vh] lg:min-h-svh" />
+        <div className="min-h-[48vh] lg:col-span-6 lg:min-h-svh" />
       </div>
     </section>
   );
