@@ -20,11 +20,11 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "I2L Solutions | Arquitetura em todo o Brasil",
   description:
-    "I2L Solutions — Iza e equipe. Arquitetura, interiores, obra e retrofit. Do conceito à entrega da obra. Escritório no Itaim Bibi, São Paulo. Atendimento em todo o Brasil.",
+    "I2L Solutions — Solução 360° | Iza Luiza e equipe. Arquitetura, interiores, obra e retrofit. Da concepção do projeto à entrega final da obra. Escritório no Itaim Bibi, São Paulo. Atendimento em todo o Brasil.",
   openGraph: {
     title: "I2L Solutions | Arquitetura em todo o Brasil",
     description:
-      "Um único time para cuidar de todo o seu projeto. Escritório no Itaim. Atendimento em todo o Brasil.",
+      "Um único time para cuidar de todas as etapas. Escritório no Itaim. Atendimento em todo o Brasil.",
     locale: "pt_BR",
     type: "website",
   },

@@ -21,14 +21,20 @@ export function Hero() {
       </div>
       <div className="relative z-10 grid min-h-svh lg:grid-cols-12">
         <div className="flex flex-col justify-center px-6 pt-28 pb-16 sm:px-10 lg:col-span-6 lg:px-16 lg:pt-32">
-          <p className="mb-8 text-sm text-foreground/70">
-            Arquitetura, interiores, obra e retrofit
+          <p className="mb-3 text-sm text-foreground/70">
+            Solução 360° | Iza Luiza e equipe
+          </p>
+          <p className="mb-8 text-xs tracking-[0.18em] text-foreground/50 uppercase">
+            Arquitetura · Interiores · Obra · Retrofit
           </p>
           <h1 className="font-heading max-w-xl text-4xl leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.25rem]">
-            Um único time para cuidar de todo o seu projeto.
+            Um único time para cuidar de todas as etapas.
           </h1>
           <p className="mt-6 max-w-md text-base leading-7 text-muted-foreground">
-            Iza e equipe. Do conceito à entrega da obra.
+            Da concepção do projeto à entrega final da obra.
+          </p>
+          <p className="mt-4 max-w-lg text-base leading-7 text-muted-foreground">
+            Você ganha tempo, enquanto assumimos toda a responsabilidade.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
             <Button
