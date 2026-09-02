@@ -8,7 +8,7 @@ export function Logo({ className }: { className?: string }) {
       aria-label="I2L Solutions"
     >
       <img
-        src="/images/logo.png"
+        src="/images/logo.png?v=c9b08a"
         alt=""
         width={48}
         height={57}
