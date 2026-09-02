@@ -1,6 +1,6 @@
 export const site = {
   name: "I2L Solutions",
-  tagline: "Do conceito à entrega da obra.",
+  tagline: "Da concepção do projeto à entrega final da obra.",
   city: "Itaim Bibi, São Paulo",
   whatsapp: {
     e164: "5511989116464",
