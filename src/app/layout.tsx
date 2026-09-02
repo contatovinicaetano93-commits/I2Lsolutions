@@ -18,13 +18,13 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "I2L Solutions | Arquitetura em todo o Brasil",
+  title: "I2L Solutions | São Paulo • Brasil • Miami",
   description:
-    "I2L Solutions — Solução 360° | Iza Luiza e equipe. Arquitetura, interiores, obra e retrofit. Da concepção do projeto à entrega final da obra. Escritório no Itaim Bibi, São Paulo. Atendimento em todo o Brasil.",
+    "I2L Solutions — Solução 360° | Iza Luiza e equipe. Arquitetura, interiores, obra e retrofit. Showroom no Itaim Bibi, São Paulo. Atendimento presencial ou online — São Paulo, Brasil e Miami.",
   openGraph: {
-    title: "I2L Solutions | Arquitetura em todo o Brasil",
+    title: "I2L Solutions | São Paulo • Brasil • Miami",
     description:
-      "Um único time para cuidar de todas as etapas. Escritório no Itaim. Atendimento em todo o Brasil.",
+      "Um único time para cuidar de todas as etapas. Showroom no Itaim Bibi. Atendimento presencial ou online.",
     locale: "pt_BR",
     type: "website",
   },
