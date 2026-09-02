@@ -19,8 +19,8 @@ export function SiteFooter() {
         </a>
       </div>
       <p className="mx-auto mt-8 max-w-5xl text-xs text-muted-foreground">
-        © {new Date().getFullYear()} I2L Solutions. Itaim Bibi, São Paulo.
-        Atendimento em todo o Brasil.
+        © {new Date().getFullYear()} I2L Solutions. Showroom | Itaim Bibi —
+        SP. São Paulo • Brasil • Miami.
       </p>
     </footer>
   );

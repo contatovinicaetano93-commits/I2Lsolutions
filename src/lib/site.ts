@@ -1,7 +1,7 @@
 export const site = {
   name: "I2L Solutions",
   tagline: "Da concepção do projeto à entrega final da obra.",
-  city: "Itaim Bibi, São Paulo",
+  city: "São Paulo • Brasil • Miami",
   whatsapp: {
     e164: "5511989116464",
     display: "(11) 98911-6464",
@@ -16,7 +16,7 @@ export const whatsappHref = (message: string) =>
 export const messages = {
   talk: "Olá, Iza. Gostaria de conversar sobre um projeto com a I2L Solutions.",
   schedule:
-    "Olá, Iza. Gostaria de agendar uma conversa com a I2L Solutions.",
+    "Olá, Iza. Gostaria de agendar um atendimento presencial ou online com a I2L Solutions.",
 };
 
 export const nav = [
