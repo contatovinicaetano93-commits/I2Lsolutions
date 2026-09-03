@@ -41,6 +41,11 @@ export function Projects() {
               priority={active === 0}
             />
           </button>
+          {project.place ? (
+            <p className="mt-3 text-[11px] tracking-[0.16em] text-muted-foreground uppercase lg:hidden">
+              {project.place}
+            </p>
+          ) : null}
           {project.images.length > 1 ? (
             <div className="mt-3 flex gap-2 overflow-x-auto pb-1 [scrollbar-width:thin]">
               {project.images.map((src, index) => (
@@ -96,7 +101,7 @@ export function Projects() {
                       {item.name}
                     </span>
                     {selected && item.place ? (
-                      <span className="pt-1 text-right text-[10px] leading-4 tracking-[0.12em] text-foreground/55 uppercase sm:pt-1.5 sm:text-[11px] sm:tracking-[0.16em]">
+                      <span className="hidden pt-1.5 text-right text-[11px] leading-4 tracking-[0.16em] text-muted-foreground uppercase lg:block">
                         {item.place.split(" · ").map((line) => (
                           <span key={line} className="block">
                             {line}
