@@ -88,6 +88,7 @@ export function Projects() {
                   >
                     <span
                       className={cn(
+                        "min-w-0 flex-1",
                         selected
                           ? "font-heading text-2xl leading-snug text-foreground sm:text-3xl"
                           : "text-base text-muted-foreground hover:text-foreground",
@@ -96,9 +97,11 @@ export function Projects() {
                       {item.name}
                     </span>
                     {selected && item.place ? (
-                      <span className="mt-2 flex shrink-0 flex-col text-right text-[11px] leading-4 tracking-[0.16em] text-muted-foreground uppercase">
+                      <span className="mt-1.5 w-[6.5rem] shrink-0 text-right text-[11px] leading-4 tracking-[0.16em] text-muted-foreground uppercase">
                         {item.place.split(" · ").map((line) => (
-                          <span key={line}>{line}</span>
+                          <span key={line} className="block">
+                            {line}
+                          </span>
                         ))}
                       </span>
                     ) : null}
