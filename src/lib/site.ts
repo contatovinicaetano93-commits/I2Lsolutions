@@ -32,50 +32,53 @@ export const servicesNav = [
   { href: "#servicos", label: "Consultoria" },
 ] as const;
 
+function shots(slug: string, count: number) {
+  return Array.from(
+    { length: count },
+    (_, index) =>
+      `/images/projects/${slug}/${String(index + 1).padStart(2, "0")}.jpg`,
+  );
+}
+
 export const projects = [
   {
-    slug: "residencia-jardins",
-    name: "Residência Jardins",
+    slug: "apt-1001",
+    name: "Apartamento 1001",
     place: "São Paulo · Residencial",
-    location: "Jardins, São Paulo",
-    type: "Residencial",
-    services: "Arquitetura · Interiores · Obra",
-    about:
-      "Casa familiar com arquitetura e interiores desenhados juntos, da planta à obra.",
-    images: [
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-    ],
+    services: "",
+    about: "",
+    images: shots("apt-1001", 10),
   },
   {
-    slug: "apartamento-itaim",
-    name: "Apartamento Itaim",
+    slug: "apt-freijo",
+    name: "Apartamento Freijó",
     place: "São Paulo · Residencial",
-    location: "Itaim Bibi, São Paulo",
-    type: "Residencial · Retrofit",
-    services: "Interiores · Retrofit",
-    about:
-      "Releitura de um apartamento existente: planta, luz e acabamentos atualizados.",
-    images: [
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80",
-    ],
+    services: "",
+    about: "",
+    images: shots("apt-freijo", 16),
   },
   {
-    slug: "casa-campo",
-    name: "Casa de Campo",
+    slug: "apt-nogueira",
+    name: "Apartamento Nogueira",
     place: "São Paulo · Residencial",
-    location: "Interior de São Paulo",
-    type: "Residencial",
-    services: "Arquitetura · Interiores",
-    about:
-      "Refúgio de fim de semana, com interiores e paisagem no mesmo desenho.",
-    images: [
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdbc?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80",
-    ],
+    services: "",
+    about: "",
+    images: shots("apt-nogueira", 10),
   },
-] as const;
+  {
+    slug: "casa-vinhais",
+    name: "Casa Vinhais",
+    place: "São Paulo · Residencial",
+    services: "",
+    about: "",
+    images: shots("casa-vinhais", 1),
+  },
+  {
+    slug: "studio-oliva",
+    name: "Studio Oliva",
+    place: "São Paulo · Studio",
+    services: "",
+    about: "",
+    images: shots("studio-oliva", 2),
+  },
+];

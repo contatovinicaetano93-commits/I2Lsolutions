@@ -41,28 +41,32 @@ export function Projects() {
               priority={active === 0}
             />
           </button>
-          <div className="mt-3 grid grid-cols-3 gap-3">
-            {project.images.map((src, index) => (
-              <button
-                key={src}
-                type="button"
-                onClick={() => setShot(index)}
-                className={cn(
-                  "relative aspect-[4/3] overflow-hidden bg-muted",
-                  index === shot ? "ring-1 ring-primary" : "opacity-70 hover:opacity-100",
-                )}
-                aria-label={`Ver foto ${index + 1} de ${project.name}`}
-              >
-                <Image
-                  src={src}
-                  alt=""
-                  fill
-                  className="object-cover"
-                  sizes="20vw"
-                />
-              </button>
-            ))}
-          </div>
+          {project.images.length > 1 ? (
+            <div className="mt-3 flex gap-2 overflow-x-auto pb-1 [scrollbar-width:thin]">
+              {project.images.map((src, index) => (
+                <button
+                  key={src}
+                  type="button"
+                  onClick={() => setShot(index)}
+                  className={cn(
+                    "relative aspect-[4/3] w-24 shrink-0 overflow-hidden bg-muted",
+                    index === shot
+                      ? "ring-1 ring-primary"
+                      : "opacity-70 hover:opacity-100",
+                  )}
+                  aria-label={`Ver foto ${index + 1} de ${project.name}`}
+                >
+                  <Image
+                    src={src}
+                    alt=""
+                    fill
+                    className="object-cover"
+                    sizes="96px"
+                  />
+                </button>
+              ))}
+            </div>
+          ) : null}
         </div>
 
         <div className="flex flex-col lg:col-span-4">
@@ -91,15 +95,21 @@ export function Projects() {
                   </button>
                   {selected ? (
                     <div className="mt-4 max-w-sm">
-                      <p className="text-sm text-muted-foreground">
-                        {item.place}
-                      </p>
-                      <p className="mt-1 text-sm text-muted-foreground">
-                        {item.services}
-                      </p>
-                      <p className="mt-4 text-sm leading-7 text-muted-foreground">
-                        {item.about}
-                      </p>
+                      {item.place ? (
+                        <p className="text-sm text-muted-foreground">
+                          {item.place}
+                        </p>
+                      ) : null}
+                      {item.services ? (
+                        <p className="mt-1 text-sm text-muted-foreground">
+                          {item.services}
+                        </p>
+                      ) : null}
+                      {item.about ? (
+                        <p className="mt-4 text-sm leading-7 text-muted-foreground">
+                          {item.about}
+                        </p>
+                      ) : null}
                     </div>
                   ) : null}
                 </li>
@@ -116,7 +126,7 @@ export function Projects() {
               {project.name}
             </DialogTitle>
           </DialogHeader>
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid max-h-[70vh] gap-4 overflow-y-auto sm:grid-cols-2">
             {project.images.map((src) => (
               <div key={src} className="relative aspect-[4/3] overflow-hidden bg-muted">
                 <Image src={src} alt={project.name} fill className="object-cover" sizes="50vw" />
