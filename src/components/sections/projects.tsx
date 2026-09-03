@@ -70,34 +70,42 @@ export function Projects() {
           <h2 className="font-heading mt-3 text-4xl leading-tight">
             Projetos selecionados.
           </h2>
-          <ul className="mt-10 space-y-3">
-            {projects.map((item, index) => (
-              <li key={item.slug}>
-                <button
-                  type="button"
-                  onClick={() => setActive(index)}
-                  className={cn(
-                    "text-left text-base transition-colors",
-                    index === active
-                      ? "text-foreground"
-                      : "text-muted-foreground hover:text-foreground",
-                  )}
-                >
-                  {item.name}
-                </button>
-              </li>
-            ))}
+          <ul className="mt-10 space-y-5">
+            {projects.map((item, index) => {
+              const selected = index === active;
+
+              return (
+                <li key={item.slug}>
+                  <button
+                    type="button"
+                    onClick={() => setActive(index)}
+                    aria-current={selected ? "true" : undefined}
+                    className={cn(
+                      "w-full text-left transition-colors",
+                      selected
+                        ? "font-heading text-2xl leading-snug text-foreground sm:text-3xl"
+                        : "text-base text-muted-foreground hover:text-foreground",
+                    )}
+                  >
+                    {item.name}
+                  </button>
+                  {selected ? (
+                    <div className="mt-4 max-w-sm">
+                      <p className="text-sm text-muted-foreground">
+                        {item.place}
+                      </p>
+                      <p className="mt-1 text-sm text-muted-foreground">
+                        {item.services}
+                      </p>
+                      <p className="mt-4 text-sm leading-7 text-muted-foreground">
+                        {item.about}
+                      </p>
+                    </div>
+                  ) : null}
+                </li>
+              );
+            })}
           </ul>
-          <div className="mt-auto border-t border-white/10 pt-8 lg:mt-16">
-            <h3 className="font-heading text-3xl">{project.name}</h3>
-            <p className="mt-3 text-sm text-muted-foreground">
-              {project.place}
-            </p>
-            <p className="mt-1 text-sm text-muted-foreground">{project.services}</p>
-            <p className="mt-5 text-sm leading-7 text-muted-foreground">
-              {project.about}
-            </p>
-          </div>
         </div>
       </div>
 
