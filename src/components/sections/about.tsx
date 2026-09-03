@@ -28,7 +28,10 @@ export function About() {
       <h2 className="font-heading max-w-2xl text-4xl leading-tight sm:text-5xl">
         Como a I2L conduz o projeto.
       </h2>
-      <div className="-mx-6 mt-12 overflow-x-auto px-6 pb-3 [scrollbar-width:thin] lg:mx-0 lg:overflow-visible lg:px-0 lg:pb-0">
+      <p className="mt-3 text-sm text-foreground/45 lg:hidden">
+        Deslize para o lado e acompanhe cada etapa.
+      </p>
+      <div className="-mx-6 mt-12 overflow-x-auto px-6 pb-3 [scrollbar-width:thin] [mask-image:linear-gradient(to_right,transparent,black_1.25rem,black_calc(100%-1.5rem),transparent)] lg:mx-0 lg:overflow-visible lg:px-0 lg:pb-0 lg:[mask-image:none]">
         <ol className="flex min-w-max snap-x snap-mandatory lg:min-w-0 lg:w-full lg:snap-none">
           {process.map((step, index) => {
             const isFirst = index === 0;
