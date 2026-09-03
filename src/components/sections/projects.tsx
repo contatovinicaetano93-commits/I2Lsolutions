@@ -41,6 +41,11 @@ export function Projects() {
               priority={active === 0}
             />
           </button>
+          {project.place ? (
+            <p className="mt-3 text-[11px] tracking-[0.16em] text-muted-foreground uppercase lg:hidden">
+              {project.place}
+            </p>
+          ) : null}
           {project.images.length > 1 ? (
             <div className="mt-3 flex gap-2 overflow-x-auto pb-1 [scrollbar-width:thin]">
               {project.images.map((src, index) => (
@@ -74,7 +79,7 @@ export function Projects() {
           <h2 className="font-heading mt-3 text-4xl leading-tight">
             Projetos selecionados.
           </h2>
-          <ul className="mt-10 space-y-5">
+          <ul className="mt-10 space-y-6">
             {projects.map((item, index) => {
               const selected = index === active;
 
@@ -84,29 +89,41 @@ export function Projects() {
                     type="button"
                     onClick={() => setActive(index)}
                     aria-current={selected ? "true" : undefined}
-                    className={cn(
-                      "w-full text-left transition-colors",
-                      selected
-                        ? "font-heading text-2xl leading-snug text-foreground sm:text-3xl"
-                        : "text-base text-muted-foreground hover:text-foreground",
-                    )}
+                    className="grid w-full grid-cols-[minmax(0,1fr)_auto] items-start gap-x-3 text-left transition-colors"
                   >
-                    {item.name}
+                    <span
+                      className={cn(
+                        selected
+                          ? "font-heading text-xl leading-snug text-foreground sm:text-2xl lg:text-3xl"
+                          : "text-base text-muted-foreground hover:text-foreground",
+                      )}
+                    >
+                      {item.name}
+                    </span>
+                    {selected && item.place ? (
+                      <span className="hidden pt-1.5 text-right text-[11px] leading-4 tracking-[0.16em] text-muted-foreground uppercase lg:block">
+                        {item.place.split(" · ").map((line) => (
+                          <span key={line} className="block">
+                            {line}
+                          </span>
+                        ))}
+                      </span>
+                    ) : null}
                   </button>
-                  {selected ? (
+                  {selected && (item.services || item.about) ? (
                     <div className="mt-4 max-w-sm">
-                      {item.place ? (
-                        <p className="text-sm text-muted-foreground">
-                          {item.place}
-                        </p>
-                      ) : null}
                       {item.services ? (
-                        <p className="mt-1 text-sm text-muted-foreground">
+                        <p className="text-sm text-muted-foreground">
                           {item.services}
                         </p>
                       ) : null}
                       {item.about ? (
-                        <p className="mt-4 text-sm leading-7 text-muted-foreground">
+                        <p
+                          className={cn(
+                            "text-sm leading-7 text-muted-foreground",
+                            item.services && "mt-4",
+                          )}
+                        >
                           {item.about}
                         </p>
                       ) : null}
