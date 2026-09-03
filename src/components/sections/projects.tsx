@@ -74,7 +74,7 @@ export function Projects() {
           <h2 className="font-heading mt-3 text-4xl leading-tight">
             Projetos selecionados.
           </h2>
-          <ul className="mt-10 space-y-5">
+          <ul className="mt-10 space-y-6">
             {projects.map((item, index) => {
               const selected = index === active;
 
@@ -84,29 +84,39 @@ export function Projects() {
                     type="button"
                     onClick={() => setActive(index)}
                     aria-current={selected ? "true" : undefined}
-                    className={cn(
-                      "w-full text-left transition-colors",
-                      selected
-                        ? "font-heading text-2xl leading-snug text-foreground sm:text-3xl"
-                        : "text-base text-muted-foreground hover:text-foreground",
-                    )}
+                    className="flex w-full items-start justify-between gap-4 text-left transition-colors"
                   >
-                    {item.name}
+                    <span
+                      className={cn(
+                        selected
+                          ? "font-heading text-2xl leading-snug text-foreground sm:text-3xl"
+                          : "text-base text-muted-foreground hover:text-foreground",
+                      )}
+                    >
+                      {item.name}
+                    </span>
+                    {selected && item.place ? (
+                      <span className="mt-2 flex shrink-0 flex-col text-right text-[11px] leading-4 tracking-[0.16em] text-muted-foreground uppercase">
+                        {item.place.split(" · ").map((line) => (
+                          <span key={line}>{line}</span>
+                        ))}
+                      </span>
+                    ) : null}
                   </button>
-                  {selected ? (
+                  {selected && (item.services || item.about) ? (
                     <div className="mt-4 max-w-sm">
-                      {item.place ? (
-                        <p className="text-sm text-muted-foreground">
-                          {item.place}
-                        </p>
-                      ) : null}
                       {item.services ? (
-                        <p className="mt-1 text-sm text-muted-foreground">
+                        <p className="text-sm text-muted-foreground">
                           {item.services}
                         </p>
                       ) : null}
                       {item.about ? (
-                        <p className="mt-4 text-sm leading-7 text-muted-foreground">
+                        <p
+                          className={cn(
+                            "text-sm leading-7 text-muted-foreground",
+                            item.services && "mt-4",
+                          )}
+                        >
                           {item.about}
                         </p>
                       ) : null}
