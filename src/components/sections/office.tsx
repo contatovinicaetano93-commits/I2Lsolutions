@@ -17,7 +17,7 @@ export function Office() {
         como prefere ser atendido: presencialmente ou online.
       </p>
       <p className="mt-8 text-sm leading-7 text-foreground/80">
-        📍 Showroom | Itaim Bibi — SP
+        Showroom | Itaim Bibi — SP
       </p>
       <a
         href={whatsappHref(messages.schedule)}
@@ -25,7 +25,7 @@ export function Office() {
         rel="noopener noreferrer"
         className="mt-2 block text-sm leading-7 text-foreground/80 hover:text-foreground"
       >
-        💻 Agende seu atendimento presencial ou online
+        Agende seu atendimento presencial ou online
       </a>
       <a
         href={`https://wa.me/${site.whatsapp.e164}`}

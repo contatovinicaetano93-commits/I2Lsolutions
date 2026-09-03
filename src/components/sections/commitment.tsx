@@ -18,7 +18,7 @@ const guarantees = [
 export function Commitment() {
   return (
     <Section id="compromisso" kicker="Controle e transparência" tone="sand">
-      <h2 className="font-heading max-w-3xl text-4xl leading-tight sm:text-5xl">
+      <h2 className="font-heading max-w-3xl text-2xl leading-snug sm:text-3xl lg:text-4xl">
         Garantimos PRAZO | CUSTO JUSTO | QUALIDADE
       </h2>
       <div className="mt-14 grid max-w-3xl gap-10 sm:grid-cols-2 sm:gap-16">
