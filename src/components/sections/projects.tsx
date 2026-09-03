@@ -84,20 +84,19 @@ export function Projects() {
                     type="button"
                     onClick={() => setActive(index)}
                     aria-current={selected ? "true" : undefined}
-                    className="flex w-full items-start justify-between gap-4 text-left transition-colors"
+                    className="grid w-full grid-cols-[minmax(0,1fr)_auto] items-start gap-x-3 text-left transition-colors"
                   >
                     <span
                       className={cn(
-                        "min-w-0 flex-1",
                         selected
-                          ? "font-heading text-2xl leading-snug text-foreground sm:text-3xl"
+                          ? "font-heading text-xl leading-snug text-foreground sm:text-2xl lg:text-3xl"
                           : "text-base text-muted-foreground hover:text-foreground",
                       )}
                     >
                       {item.name}
                     </span>
                     {selected && item.place ? (
-                      <span className="mt-1.5 w-[6.5rem] shrink-0 text-right text-[11px] leading-4 tracking-[0.16em] text-muted-foreground uppercase">
+                      <span className="pt-1 text-right text-[10px] leading-4 tracking-[0.12em] text-foreground/55 uppercase sm:pt-1.5 sm:text-[11px] sm:tracking-[0.16em]">
                         {item.place.split(" · ").map((line) => (
                           <span key={line} className="block">
                             {line}
