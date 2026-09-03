@@ -61,7 +61,7 @@ export function SiteHeader() {
               <Button
                 variant="outline"
                 size="icon"
-                className="rounded-none border-primary/25 bg-transparent text-primary hover:bg-primary hover:text-primary-foreground"
+                className="rounded-full border-primary/25 bg-transparent text-primary hover:bg-primary hover:text-primary-foreground"
                 aria-label="Abrir menu"
               >
                 <Menu className="size-4" />

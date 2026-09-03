@@ -39,7 +39,7 @@ export function Hero() {
           <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
             <Button
               asChild
-              className="h-11 rounded-none border border-primary bg-primary px-7 text-sm font-normal text-primary-foreground hover:bg-transparent hover:text-primary"
+              className="h-11 rounded-full border border-primary bg-primary px-7 text-sm font-normal text-primary-foreground hover:bg-transparent hover:text-primary"
             >
               <a href="#a-i2l">Conheça a I2L</a>
             </Button>
