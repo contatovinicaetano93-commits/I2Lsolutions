@@ -41,16 +41,16 @@ export function Projects() {
   }
 
   return (
-    <Section id="projetos" width="wide">
+    <Section id="projetos" width="wide" className="max-lg:py-12">
       <div className="lg:hidden">
         <p className="text-sm text-foreground/55">Projetos</p>
-        <h2 className="font-heading mt-2 text-3xl leading-tight">
+        <h2 className="font-heading mt-2 text-2xl leading-tight">
           Projetos selecionados.
         </h2>
 
         <div
           ref={tabsRef}
-          className="-mx-6 mt-6 flex gap-6 overflow-x-auto px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="-mx-6 mt-5 flex gap-6 overflow-x-auto px-6 [scrollbar-width:none] [mask-image:linear-gradient(to_right,black_0,black_calc(100%-1.25rem),transparent)] [&::-webkit-scrollbar]:hidden"
         >
           {projects.map((item, index) => {
             const selected = index === active;
@@ -65,8 +65,8 @@ export function Projects() {
                 className={cn(
                   "shrink-0 whitespace-nowrap py-1 text-left transition-colors",
                   selected
-                    ? "font-heading text-lg text-foreground"
-                    : "text-sm text-muted-foreground",
+                    ? "font-heading text-xl text-foreground"
+                    : "text-sm text-foreground/40",
                 )}
               >
                 {item.name}
@@ -78,7 +78,7 @@ export function Projects() {
         <div
           ref={scrollerRef}
           onScroll={handleScroll}
-          className="-mx-6 mt-6 flex snap-x snap-mandatory overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="-mx-6 mt-5 flex snap-x snap-mandatory overflow-x-auto overscroll-x-contain touch-pan-x [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {project.images.map((src, index) => (
             <div
