@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState, type UIEvent } from "react";
 import Image from "next/image";
 import { Section } from "@/components/section";
 import {
@@ -16,15 +16,109 @@ export function Projects() {
   const [active, setActive] = useState(0);
   const [shot, setShot] = useState(0);
   const [galleryOpen, setGalleryOpen] = useState(false);
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const tabsRef = useRef<HTMLDivElement>(null);
   const project = projects[active];
 
   useEffect(() => {
     setShot(0);
+    scrollerRef.current?.scrollTo({ left: 0 });
   }, [active]);
 
+  useEffect(() => {
+    const tabs = tabsRef.current;
+    const tab = document.getElementById(`project-tab-${project.slug}`);
+    if (!tabs || !tab) return;
+    const left = tab.offsetLeft - tabs.clientWidth / 2 + tab.clientWidth / 2;
+    tabs.scrollTo({ left: Math.max(0, left), behavior: "smooth" });
+  }, [active, project.slug]);
+
+  function handleScroll(event: UIEvent<HTMLDivElement>) {
+    const node = event.currentTarget;
+    if (node.clientWidth === 0) return;
+    const next = Math.round(node.scrollLeft / node.clientWidth);
+    if (next !== shot) setShot(next);
+  }
+
   return (
-    <Section id="projetos" width="wide">
-      <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+    <Section id="projetos" width="wide" className="max-lg:py-12">
+      <div className="lg:hidden">
+        <p className="text-sm text-foreground/55">Projetos</p>
+        <h2 className="font-heading mt-2 text-2xl leading-tight">
+          Projetos selecionados.
+        </h2>
+
+        <div
+          ref={tabsRef}
+          className="-mx-6 mt-5 flex gap-6 overflow-x-auto px-6 [scrollbar-width:none] [mask-image:linear-gradient(to_right,black_0,black_calc(100%-1.25rem),transparent)] [&::-webkit-scrollbar]:hidden"
+        >
+          {projects.map((item, index) => {
+            const selected = index === active;
+
+            return (
+              <button
+                key={item.slug}
+                id={`project-tab-${item.slug}`}
+                type="button"
+                onClick={() => setActive(index)}
+                aria-current={selected ? "true" : undefined}
+                className={cn(
+                  "shrink-0 whitespace-nowrap py-1 text-left transition-colors",
+                  selected
+                    ? "font-heading text-xl text-foreground"
+                    : "text-sm text-foreground/40",
+                )}
+              >
+                {item.name}
+              </button>
+            );
+          })}
+        </div>
+
+        <div
+          ref={scrollerRef}
+          onScroll={handleScroll}
+          className="-mx-6 mt-5 flex snap-x snap-mandatory overflow-x-auto overscroll-x-contain touch-pan-x [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        >
+          {project.images.map((src, index) => (
+            <div
+              key={src}
+              className="relative aspect-[4/3] min-w-0 shrink-0 basis-full snap-center bg-muted"
+            >
+              <Image
+                src={src}
+                alt={`${project.name}, foto ${index + 1}`}
+                fill
+                className="object-cover"
+                sizes="100vw"
+                priority={active === 0 && index === 0}
+              />
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-4">
+          {project.place ? (
+            <p className="text-sm text-muted-foreground">{project.place}</p>
+          ) : null}
+          {project.images.length > 1 ? (
+            <p className="mt-2 text-xs text-foreground/45">
+              {String(shot + 1).padStart(2, "0")} /{" "}
+              {String(project.images.length).padStart(2, "0")} · deslize para ver
+            </p>
+          ) : null}
+          {project.services ? (
+            <p className="mt-3 text-sm text-muted-foreground">{project.services}</p>
+          ) : null}
+          {project.about ? (
+            <p className="mt-3 text-sm leading-7 text-muted-foreground">
+              {project.about}
+            </p>
+          ) : null}
+        </div>
+      </div>
+
+      <div className="hidden lg:grid lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-8">
           <button
             type="button"
@@ -41,11 +135,6 @@ export function Projects() {
               priority={active === 0}
             />
           </button>
-          {project.place ? (
-            <p className="mt-3 text-[11px] tracking-[0.16em] text-muted-foreground uppercase lg:hidden">
-              {project.place}
-            </p>
-          ) : null}
           {project.images.length > 1 ? (
             <div className="mt-3 flex gap-2 overflow-x-auto pb-1 [scrollbar-width:thin]">
               {project.images.map((src, index) => (
@@ -94,14 +183,14 @@ export function Projects() {
                     <span
                       className={cn(
                         selected
-                          ? "font-heading text-xl leading-snug text-foreground sm:text-2xl lg:text-3xl"
+                          ? "font-heading text-2xl leading-snug text-foreground sm:text-3xl"
                           : "text-base text-muted-foreground hover:text-foreground",
                       )}
                     >
                       {item.name}
                     </span>
                     {selected && item.place ? (
-                      <span className="hidden pt-1.5 text-right text-[11px] leading-4 tracking-[0.16em] text-muted-foreground uppercase lg:block">
+                      <span className="pt-1.5 text-right text-[11px] leading-4 tracking-[0.16em] text-muted-foreground uppercase">
                         {item.place.split(" · ").map((line) => (
                           <span key={line} className="block">
                             {line}
@@ -137,13 +226,13 @@ export function Projects() {
       </div>
 
       <Dialog open={galleryOpen} onOpenChange={setGalleryOpen}>
-        <DialogContent className="max-w-4xl rounded-none bg-background sm:max-w-4xl">
+        <DialogContent className="max-h-[90svh] max-w-4xl overflow-y-auto rounded-none bg-background sm:max-w-4xl">
           <DialogHeader>
             <DialogTitle className="font-heading text-2xl">
               {project.name}
             </DialogTitle>
           </DialogHeader>
-          <div className="grid max-h-[70vh] gap-4 overflow-y-auto sm:grid-cols-2">
+          <div className="grid gap-4 sm:grid-cols-2">
             {project.images.map((src) => (
               <div key={src} className="relative aspect-[4/3] overflow-hidden bg-muted">
                 <Image src={src} alt={project.name} fill className="object-cover" sizes="50vw" />
