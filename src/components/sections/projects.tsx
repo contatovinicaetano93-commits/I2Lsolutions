@@ -17,6 +17,7 @@ export function Projects() {
   const [shot, setShot] = useState(0);
   const [galleryOpen, setGalleryOpen] = useState(false);
   const scrollerRef = useRef<HTMLDivElement>(null);
+  const tabsRef = useRef<HTMLDivElement>(null);
   const project = projects[active];
 
   useEffect(() => {
@@ -25,9 +26,11 @@ export function Projects() {
   }, [active]);
 
   useEffect(() => {
-    document
-      .getElementById(`project-tab-${project.slug}`)
-      ?.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    const tabs = tabsRef.current;
+    const tab = document.getElementById(`project-tab-${project.slug}`);
+    if (!tabs || !tab) return;
+    const left = tab.offsetLeft - tabs.clientWidth / 2 + tab.clientWidth / 2;
+    tabs.scrollTo({ left: Math.max(0, left), behavior: "smooth" });
   }, [active, project.slug]);
 
   function handleScroll(event: UIEvent<HTMLDivElement>) {
@@ -45,7 +48,10 @@ export function Projects() {
           Projetos selecionados.
         </h2>
 
-        <div className="-mx-6 mt-6 flex gap-6 overflow-x-auto px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div
+          ref={tabsRef}
+          className="-mx-6 mt-6 flex gap-6 overflow-x-auto px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        >
           {projects.map((item, index) => {
             const selected = index === active;
 
@@ -57,7 +63,7 @@ export function Projects() {
                 onClick={() => setActive(index)}
                 aria-current={selected ? "true" : undefined}
                 className={cn(
-                  "shrink-0 whitespace-nowrap text-left transition-colors",
+                  "shrink-0 whitespace-nowrap py-1 text-left transition-colors",
                   selected
                     ? "font-heading text-lg text-foreground"
                     : "text-sm text-muted-foreground",
@@ -77,7 +83,7 @@ export function Projects() {
           {project.images.map((src, index) => (
             <div
               key={src}
-              className="relative aspect-[4/3] w-full min-w-full shrink-0 snap-center bg-muted"
+              className="relative aspect-[4/3] min-w-0 shrink-0 basis-full snap-center bg-muted"
             >
               <Image
                 src={src}
@@ -92,13 +98,13 @@ export function Projects() {
         </div>
 
         <div className="mt-4">
-          <p className="font-heading text-2xl leading-snug">{project.name}</p>
           {project.place ? (
-            <p className="mt-1 text-sm text-muted-foreground">{project.place}</p>
+            <p className="text-sm text-muted-foreground">{project.place}</p>
           ) : null}
           {project.images.length > 1 ? (
             <p className="mt-2 text-xs text-foreground/45">
-              {String(shot + 1).padStart(2, "0")} / {String(project.images.length).padStart(2, "0")} · deslize para ver
+              {String(shot + 1).padStart(2, "0")} /{" "}
+              {String(project.images.length).padStart(2, "0")} · deslize para ver
             </p>
           ) : null}
           {project.services ? (
