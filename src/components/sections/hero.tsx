@@ -1,19 +1,12 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { HeroCarousel } from "@/components/hero-carousel";
 import { whatsappHref, messages } from "@/lib/site";
 
 export function Hero() {
   return (
     <section id="inicio" className="relative min-h-svh overflow-hidden bg-black">
       <div className="absolute inset-x-0 bottom-0 h-[52vh] lg:inset-y-0 lg:left-[42%] lg:h-auto">
-        <Image
-          src="/images/hero.jpg"
-          alt="Residência contemporânea ao entardecer"
-          fill
-          priority
-          sizes="(min-width: 1024px) 58vw, 100vw"
-          className="object-cover object-[center_40%] lg:object-center"
-        />
+        <HeroCarousel />
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black via-black/50 via-[30%] to-transparent to-[68%] lg:bg-gradient-to-r lg:from-black lg:via-black/75 lg:via-[28%] lg:to-transparent lg:to-[58%]"
