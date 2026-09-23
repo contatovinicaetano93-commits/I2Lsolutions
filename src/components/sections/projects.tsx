@@ -43,7 +43,7 @@ export function Projects() {
   return (
     <Section id="projetos" width="wide" className="max-lg:py-12">
       <div className="lg:hidden">
-        <p className="text-sm text-foreground/55">Projetos</p>
+        <p className="text-sm text-foreground/85">Projetos</p>
         <h2 className="font-heading mt-2 text-2xl leading-tight">
           Projetos selecionados.
         </h2>
@@ -66,7 +66,7 @@ export function Projects() {
                   "shrink-0 whitespace-nowrap py-1 text-left transition-colors",
                   selected
                     ? "font-heading text-xl text-foreground"
-                    : "text-sm text-foreground/40",
+                    : "text-sm text-foreground/70",
                 )}
               >
                 {item.name}
@@ -102,7 +102,7 @@ export function Projects() {
             <p className="text-sm text-muted-foreground">{project.place}</p>
           ) : null}
           {project.images.length > 1 ? (
-            <p className="mt-2 text-xs text-foreground/45">
+            <p className="mt-2 text-xs text-foreground/80">
               {String(shot + 1).padStart(2, "0")} /{" "}
               {String(project.images.length).padStart(2, "0")} · deslize para ver
             </p>
@@ -164,7 +164,7 @@ export function Projects() {
         </div>
 
         <div className="flex flex-col lg:col-span-4">
-          <p className="text-sm text-foreground/55">Projetos</p>
+          <p className="text-sm text-foreground/85">Projetos</p>
           <h2 className="font-heading mt-3 text-4xl leading-tight">
             Projetos selecionados.
           </h2>

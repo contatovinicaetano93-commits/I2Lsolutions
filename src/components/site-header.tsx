@@ -40,7 +40,7 @@ export function SiteHeader() {
             <a
               key={item.href}
               href={item.href}
-              className="text-sm text-foreground/60 transition-colors hover:text-foreground"
+              className="text-sm text-foreground/85 transition-colors hover:text-foreground"
             >
               {item.label}
             </a>

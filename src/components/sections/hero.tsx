@@ -9,15 +9,15 @@ export function Hero() {
         <HeroCarousel />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black via-black/50 via-[30%] to-transparent to-[68%] lg:bg-gradient-to-r lg:from-black lg:via-black/75 lg:via-[28%] lg:to-transparent lg:to-[58%]"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black via-black/70 via-[30%] to-transparent to-[68%] lg:bg-gradient-to-r lg:from-black lg:via-black/85 lg:via-[28%] lg:to-transparent lg:to-[58%]"
         />
       </div>
       <div className="relative z-10 grid min-h-svh lg:grid-cols-12">
         <div className="flex flex-col justify-center px-6 pt-28 pb-16 sm:px-10 lg:col-span-6 lg:px-16 lg:pt-32">
-          <p className="mb-3 text-sm text-foreground/70">
+          <p className="mb-3 text-sm text-foreground/90">
             Solução 360° | Iza Luiza e equipe
           </p>
-          <p className="mb-8 text-xs tracking-[0.18em] text-foreground/50 uppercase">
+          <p className="mb-8 text-xs tracking-[0.18em] text-foreground/80 uppercase">
             Arquitetura · Interiores · Obra · Retrofit
           </p>
           <h1 className="font-heading max-w-xl text-4xl leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.25rem]">
