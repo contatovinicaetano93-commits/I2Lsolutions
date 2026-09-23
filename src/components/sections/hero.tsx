@@ -5,15 +5,8 @@ import { whatsappHref, messages } from "@/lib/site";
 export function Hero() {
   return (
     <section id="inicio" className="relative min-h-svh overflow-hidden bg-black">
-      <div className="absolute inset-x-0 bottom-0 h-[52vh] lg:inset-y-0 lg:left-[42%] lg:h-auto">
-        <HeroCarousel />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black via-black/70 via-[30%] to-transparent to-[68%] lg:bg-gradient-to-r lg:from-black lg:via-black/85 lg:via-[28%] lg:to-transparent lg:to-[58%]"
-        />
-      </div>
-      <div className="relative z-10 grid min-h-svh lg:grid-cols-12">
-        <div className="flex flex-col justify-center px-6 pt-28 pb-16 sm:px-10 lg:col-span-6 lg:px-16 lg:pt-32">
+      <div className="relative z-10 flex min-h-svh flex-col lg:grid lg:grid-cols-12">
+        <div className="flex flex-col justify-center px-6 pt-28 pb-6 sm:px-10 lg:col-span-6 lg:px-16 lg:pt-32 lg:pb-16">
           <p className="mb-3 text-sm text-foreground/90">
             Solução 360° | Iza Luiza e equipe
           </p>
@@ -46,7 +39,13 @@ export function Hero() {
             </a>
           </div>
         </div>
-        <div className="min-h-[48vh] lg:col-span-6 lg:min-h-svh" />
+        <div className="relative min-h-[240px] flex-1 overflow-hidden lg:col-span-6 lg:min-h-svh">
+          <HeroCarousel />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black from-0% via-black/25 via-[12%] to-transparent lg:bg-gradient-to-r lg:from-black lg:via-black/85 lg:via-[28%] lg:to-transparent lg:to-[58%]"
+          />
+        </div>
       </div>
     </section>
   );
