@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Outfit } from "next/font/google";
+import { Instrument_Sans, Newsreader } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { WhatsAppFloat } from "@/components/whatsapp-float";
 import "./globals.css";
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const instrument = Instrument_Sans({
+  variable: "--font-instrument",
   subsets: ["latin"],
-  weight: ["300", "400", "500"],
+  weight: ["400", "500"],
 });
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const newsreader = Newsreader({
+  variable: "--font-newsreader",
   subsets: ["latin"],
   style: ["normal", "italic"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -35,7 +35,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="pt-BR"
-      className={`${outfit.variable} ${cormorant.variable} h-full scroll-smooth antialiased`}
+      className={`${instrument.variable} ${newsreader.variable} h-full scroll-smooth antialiased`}
       style={{ colorScheme: "dark" }}
     >
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground">

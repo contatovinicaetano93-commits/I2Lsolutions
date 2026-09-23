@@ -17,7 +17,7 @@ export function WhatsAppButton({
     <Button
       asChild
       className={cn(
-        "h-11 min-w-[9.5rem] rounded-full px-6 text-sm font-normal",
+        "h-11 min-w-[9.5rem] rounded-full px-7 text-sm font-normal tracking-[0.16em]",
         variant === "solid" &&
           "border border-primary bg-primary text-primary-foreground hover:bg-transparent hover:text-primary",
         variant === "outline" &&

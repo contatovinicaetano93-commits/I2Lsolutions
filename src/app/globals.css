@@ -7,8 +7,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
-  --font-heading: var(--font-cormorant), ui-serif, Georgia, "Times New Roman",
+  --font-sans: var(--font-instrument), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-newsreader), ui-serif, Georgia, "Times New Roman",
     serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --color-sidebar-ring: var(--sidebar-ring);
@@ -101,6 +101,7 @@
   h3,
   .font-heading {
     font-weight: 400;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.02em;
+    line-height: 1.12;
   }
 }

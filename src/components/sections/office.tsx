@@ -4,9 +4,8 @@ import { messages, site, whatsappHref } from "@/lib/site";
 
 export function Office() {
   return (
-    <Section id="contato" width="narrow">
-      <p className="text-sm text-foreground/85">São Paulo • Brasil • Miami</p>
-      <h2 className="font-heading mt-4 text-4xl leading-tight sm:text-5xl">
+    <Section id="contato" number="05" kicker="São Paulo • Brasil • Miami" width="narrow">
+      <h2 className="font-heading text-4xl sm:text-5xl">
         Vamos transformar sua ideia em realidade?
       </h2>
       <p className="mt-6 font-heading text-2xl leading-snug text-foreground">
@@ -31,7 +30,7 @@ export function Office() {
         href={`https://wa.me/${site.whatsapp.e164}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-8 block text-lg text-foreground underline decoration-foreground/30 underline-offset-4 hover:decoration-foreground"
+        className="mt-8 block text-lg tracking-[0.04em] text-foreground underline decoration-foreground/30 underline-offset-8 hover:decoration-foreground"
       >
         {site.whatsapp.display}
       </a>

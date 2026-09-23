@@ -21,13 +21,13 @@ const choices = [
 
 export function Services() {
   return (
-    <Section id="servicos" kicker="Soluções I2L" width="narrow" tone="sand">
-      <h2 className="font-heading text-4xl leading-tight sm:text-5xl">
+    <Section id="servicos" number="04" kicker="Soluções I2L" width="narrow" tone="sand">
+      <h2 className="font-heading text-4xl sm:text-5xl">
         Qual serviço escolher?
       </h2>
       <ul className="mt-12">
         {choices.map((item) => (
-          <li key={item.title} className="border-t border-white/12 py-7 last:border-b">
+          <li key={item.title} className="border-t border-primary/20 py-7 last:border-b">
             <h3 className="font-heading text-2xl">{item.title}</h3>
             <p className="mt-3 max-w-md text-sm leading-7 text-muted-foreground">
               {item.text}
