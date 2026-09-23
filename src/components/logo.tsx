@@ -14,7 +14,7 @@ export function Logo({ className }: { className?: string }) {
         height={57}
         className="h-10 w-auto sm:h-11"
       />
-      <span className="font-heading text-base leading-none font-light tracking-[0.18em] text-foreground">
+      <span className="font-heading text-xs leading-none tracking-[0.28em] text-foreground uppercase">
         SOLUTIONS
       </span>
     </a>

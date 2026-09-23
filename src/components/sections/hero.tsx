@@ -12,14 +12,15 @@ export function Hero() {
     <section id="inicio" className="relative min-h-svh overflow-hidden bg-black">
       <div className="relative z-10 flex min-h-svh flex-col lg:grid lg:grid-cols-12">
         <div className="flex flex-col justify-center px-6 pt-28 pb-6 sm:px-10 lg:col-span-6 lg:px-16 lg:pt-32 lg:pb-16">
-          <p className="mb-3 text-sm text-foreground/90">
+          <p className="mb-3 text-[11px] tracking-[0.28em] text-primary uppercase">
             Solução 360° | Iza Luiza e equipe
           </p>
-          <p className="mb-8 text-xs tracking-[0.18em] text-foreground/80 uppercase">
+          <p className="mb-8 text-[11px] tracking-[0.28em] text-foreground/75 uppercase">
             Arquitetura · Interiores · Obra · Retrofit
           </p>
-          <h1 className="font-heading max-w-xl text-4xl leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.25rem]">
-            Um único time para cuidar de todas as etapas.
+          <h1 className="font-heading max-w-xl text-4xl tracking-tight sm:text-5xl lg:text-[3.25rem]">
+            Um único time para cuidar de{" "}
+            <em className="italic">todas as etapas</em>.
           </h1>
           <p className="mt-6 max-w-md text-base leading-7 text-muted-foreground">
             Da concepção do projeto à entrega final da obra.
@@ -30,7 +31,7 @@ export function Hero() {
           <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
             <Button
               asChild
-              className="h-11 rounded-full border border-primary bg-primary px-7 text-sm font-normal text-primary-foreground hover:bg-transparent hover:text-primary"
+              className="h-11 rounded-full border border-primary bg-primary px-7 text-sm font-normal tracking-[0.16em] text-primary-foreground hover:bg-transparent hover:text-primary"
             >
               <a href="#a-i2l">Conheça a I2L</a>
             </Button>
@@ -38,7 +39,7 @@ export function Hero() {
               href={whatsappHref(messages.talk)}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-foreground underline decoration-foreground/30 underline-offset-4 hover:decoration-foreground"
+              className="text-sm tracking-[0.12em] text-foreground underline decoration-foreground/30 underline-offset-8 hover:decoration-foreground"
             >
               Fale conosco
             </a>

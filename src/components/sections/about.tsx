@@ -24,8 +24,8 @@ const process: {
 
 export function About() {
   return (
-    <Section id="a-i2l" kicker="A I2L" width="wide">
-      <h2 className="font-heading max-w-2xl text-4xl leading-tight sm:text-5xl">
+    <Section id="a-i2l" number="01" kicker="A I2L" width="wide">
+      <h2 className="font-heading max-w-2xl text-4xl sm:text-5xl">
         Como a I2L conduz o projeto.
       </h2>
       <p className="mt-3 text-sm text-foreground/80 lg:hidden">
@@ -56,7 +56,7 @@ export function About() {
                       className="absolute top-1/2 left-1/2 right-0 h-px -translate-y-1/2 bg-primary/40"
                     />
                   )}
-                  <span className="relative z-10 flex size-10 items-center justify-center rounded-full border border-primary/40 bg-background text-[11px] tracking-[0.18em] text-foreground">
+                  <span className="relative z-10 flex size-10 items-center justify-center rounded-full border border-primary/35 bg-background text-[11px] tracking-[0.22em] text-primary">
                     {step.n}
                   </span>
                 </div>

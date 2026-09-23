@@ -30,7 +30,7 @@ export function SiteHeader() {
     <header
       className={cn(
         "fixed top-0 z-50 w-full transition-colors",
-        scrolled ? "bg-black/95" : "bg-transparent",
+        scrolled ? "border-b border-white/10 bg-black/95" : "border-b border-transparent bg-transparent",
       )}
     >
       <div className="flex h-16 items-center px-6 sm:h-20 sm:px-10 lg:px-16">
@@ -40,7 +40,7 @@ export function SiteHeader() {
             <a
               key={item.href}
               href={item.href}
-              className="text-sm text-foreground/85 transition-colors hover:text-foreground"
+              className="text-[11px] tracking-[0.22em] text-foreground/80 uppercase transition-colors hover:text-foreground"
             >
               {item.label}
             </a>
@@ -50,7 +50,7 @@ export function SiteHeader() {
           <WhatsAppButton
             message={messages.schedule}
             variant="outline"
-            className="h-9 min-w-0 px-4"
+            className="h-11 min-w-0 px-5 tracking-[0.16em]"
           >
             Agendar
           </WhatsAppButton>
@@ -78,7 +78,7 @@ export function SiteHeader() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="text-lg text-foreground"
+                    className="text-lg tracking-[0.12em] text-foreground"
                   >
                     {item.label}
                   </a>

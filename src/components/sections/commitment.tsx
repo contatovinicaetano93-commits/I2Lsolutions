@@ -17,8 +17,8 @@ const guarantees = [
 
 export function Commitment() {
   return (
-    <Section id="compromisso" kicker="Controle e transparência" tone="sand">
-      <h2 className="font-heading text-4xl leading-tight sm:text-5xl">
+    <Section id="compromisso" number="02" kicker="Controle e transparência" tone="sand">
+      <h2 className="font-heading text-4xl sm:text-5xl">
         Garantimos
       </h2>
       <dl className="mt-12 grid gap-10 sm:grid-cols-3 sm:gap-8 lg:gap-16">
@@ -33,7 +33,7 @@ export function Commitment() {
           </div>
         ))}
       </dl>
-      <div className="mt-16 grid max-w-3xl gap-10 border-t border-white/10 pt-12 sm:grid-cols-2 sm:gap-16">
+      <div className="mt-16 grid max-w-3xl gap-10 border-t border-primary/20 pt-12 sm:grid-cols-2 sm:gap-16">
         <article>
           <h3 className="font-heading text-2xl">
             O combinado é o que será entregue.

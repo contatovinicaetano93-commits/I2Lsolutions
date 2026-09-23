@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, type UIEvent } from "react";
 import Image from "next/image";
-import { Section } from "@/components/section";
+import { Section, SectionKicker } from "@/components/section";
 import {
   Dialog,
   DialogContent,
@@ -50,7 +50,7 @@ export function Projects() {
               by I2L Solutions
             </span>
           </h2>
-          <p className="w-[7.25rem] shrink-0 pb-0.5 text-right text-[11px] leading-4 text-foreground/85">
+          <p className="w-[7.25rem] shrink-0 pb-0.5 text-right text-[11px] leading-4 tracking-[0.08em] text-foreground/80">
             Deslize para o lado para ver o projeto
           </p>
         </div>
@@ -109,7 +109,7 @@ export function Projects() {
             <p className="text-sm text-muted-foreground">{project.place}</p>
           ) : null}
           {project.images.length > 1 ? (
-            <p className="mt-2 text-xs text-foreground/80">
+            <p className="mt-2 text-[11px] tracking-[0.12em] text-foreground/75">
               {String(shot + 1).padStart(2, "0")} /{" "}
               {String(project.images.length).padStart(2, "0")} · deslize para ver
               as fotos
@@ -172,8 +172,10 @@ export function Projects() {
         </div>
 
         <div className="flex flex-col lg:col-span-4">
-          <p className="text-sm text-foreground/85">Projetos</p>
-          <h2 className="font-heading mt-3 text-4xl leading-tight">
+          <SectionKicker number="03" className="mb-3">
+            Projetos
+          </SectionKicker>
+          <h2 className="font-heading text-4xl">
             Projetos by I2L Solutions
           </h2>
           <ul className="mt-10 space-y-6">
