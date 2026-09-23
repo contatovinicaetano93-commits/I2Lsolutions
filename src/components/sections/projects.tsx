@@ -43,10 +43,17 @@ export function Projects() {
   return (
     <Section id="projetos" width="wide" className="max-lg:py-12">
       <div className="lg:hidden">
-        <p className="text-sm text-foreground/55">Projetos</p>
-        <h2 className="font-heading mt-2 text-2xl leading-tight">
-          Projetos selecionados.
-        </h2>
+        <div className="flex items-end justify-between gap-3">
+          <h2 className="font-heading min-w-0 text-2xl leading-tight">
+            Projetos
+            <span className="mt-1 block text-lg text-foreground/90">
+              by I2L Solutions
+            </span>
+          </h2>
+          <p className="w-[7.25rem] shrink-0 pb-0.5 text-right text-[11px] leading-4 text-foreground/85">
+            Deslize para o lado para ver o projeto
+          </p>
+        </div>
 
         <div
           ref={tabsRef}
@@ -66,7 +73,7 @@ export function Projects() {
                   "shrink-0 whitespace-nowrap py-1 text-left transition-colors",
                   selected
                     ? "font-heading text-xl text-foreground"
-                    : "text-sm text-foreground/40",
+                    : "text-sm text-foreground/70",
                 )}
               >
                 {item.name}
@@ -102,9 +109,10 @@ export function Projects() {
             <p className="text-sm text-muted-foreground">{project.place}</p>
           ) : null}
           {project.images.length > 1 ? (
-            <p className="mt-2 text-xs text-foreground/45">
+            <p className="mt-2 text-xs text-foreground/80">
               {String(shot + 1).padStart(2, "0")} /{" "}
               {String(project.images.length).padStart(2, "0")} · deslize para ver
+              as fotos
             </p>
           ) : null}
           {project.services ? (
@@ -164,9 +172,9 @@ export function Projects() {
         </div>
 
         <div className="flex flex-col lg:col-span-4">
-          <p className="text-sm text-foreground/55">Projetos</p>
+          <p className="text-sm text-foreground/85">Projetos</p>
           <h2 className="font-heading mt-3 text-4xl leading-tight">
-            Projetos selecionados.
+            Projetos by I2L Solutions
           </h2>
           <ul className="mt-10 space-y-6">
             {projects.map((item, index) => {

@@ -11,10 +11,6 @@ export function HeroCarousel() {
   const [active, setActive] = useState(0);
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      return;
-    }
-
     let timer = 0;
 
     const start = () => {
@@ -52,9 +48,9 @@ export function HeroCarousel() {
           alt=""
           fill
           priority={index === 0}
-          sizes="(min-width: 1024px) 58vw, 100vw"
+          sizes="(min-width: 1024px) 50vw, 100vw"
           className={cn(
-            "object-cover object-[center_40%] transition-opacity duration-700 lg:object-center",
+            "object-cover object-[center_40%] transition-opacity duration-700 motion-reduce:transition-none lg:object-center",
             index === active ? "opacity-100" : "opacity-0",
           )}
         />

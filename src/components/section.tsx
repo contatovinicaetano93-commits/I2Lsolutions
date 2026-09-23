@@ -37,7 +37,7 @@ export function Section({
         )}
       >
         {kicker ? (
-          <p className="mb-6 text-sm text-foreground/55">{kicker}</p>
+          <p className="mb-6 text-sm text-foreground/85">{kicker}</p>
         ) : null}
         {children}
       </div>

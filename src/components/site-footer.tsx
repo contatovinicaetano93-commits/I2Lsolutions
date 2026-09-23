@@ -13,7 +13,7 @@ export function SiteFooter() {
           href={`https://wa.me/${site.whatsapp.e164}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm text-foreground/70 hover:text-foreground"
+          className="text-sm text-foreground/90 hover:text-foreground"
         >
           {site.whatsapp.display}
         </a>

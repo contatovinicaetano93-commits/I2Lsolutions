@@ -5,25 +5,25 @@ import { messages, site, whatsappHref } from "@/lib/site";
 export function Office() {
   return (
     <Section id="contato" width="narrow">
-      <p className="text-sm text-foreground/55">São Paulo • Brasil • Miami</p>
+      <p className="text-sm text-foreground/85">São Paulo • Brasil • Miami</p>
       <h2 className="font-heading mt-4 text-4xl leading-tight sm:text-5xl">
         Vamos transformar sua ideia em realidade?
       </h2>
-      <p className="mt-6 font-heading text-2xl leading-snug text-foreground/80">
+      <p className="mt-6 font-heading text-2xl leading-snug text-foreground">
         Onde você estiver.
       </p>
       <p className="mt-5 text-base leading-8 text-muted-foreground">
         Nosso showroom fica no Itaim Bibi, em São Paulo, mas você pode escolher
         como prefere ser atendido: presencialmente ou online.
       </p>
-      <p className="mt-8 text-sm leading-7 text-foreground/80">
+      <p className="mt-8 text-sm leading-7 text-foreground">
         Showroom | Itaim Bibi — SP
       </p>
       <a
         href={whatsappHref(messages.schedule)}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-2 block text-sm leading-7 text-foreground/80 hover:text-foreground"
+        className="mt-2 block text-sm leading-7 text-foreground hover:text-primary"
       >
         Agende seu atendimento presencial ou online
       </a>
