@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { whatsappHref, messages } from "@/lib/site";
 
 const heroImage = {
-  src: "/images/projects/casa-vinhais/01.jpg",
-  alt: "Casa Vinhais, São Paulo",
+  src: "/images/hero.jpg",
+  alt: "Fachada residencial no entardecer",
 } as const;
 
 export function Hero() {
