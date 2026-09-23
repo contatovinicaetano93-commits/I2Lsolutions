@@ -46,9 +46,6 @@ export function Projects() {
         <div className="flex items-end justify-between gap-3">
           <h2 className="font-heading min-w-0 text-2xl leading-tight">
             Projetos
-            <span className="mt-1 block text-lg text-foreground/90">
-              by I2L Solutions
-            </span>
           </h2>
           <p className="w-[7.25rem] shrink-0 pb-0.5 text-right text-[11px] leading-4 tracking-[0.08em] text-foreground/80">
             Deslize para o lado para ver o projeto
@@ -175,9 +172,7 @@ export function Projects() {
           <SectionKicker number="03" className="mb-3">
             Projetos
           </SectionKicker>
-          <h2 className="font-heading text-4xl">
-            Projetos by I2L Solutions
-          </h2>
+          <h2 className="font-heading text-4xl">Projetos</h2>
           <ul className="mt-10 space-y-6">
             {projects.map((item, index) => {
               const selected = index === active;
