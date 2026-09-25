@@ -15,13 +15,7 @@ export function Office() {
         Nosso showroom fica no Itaim Bibi, em São Paulo, mas você pode escolher
         como prefere ser atendido: presencialmente ou online.
       </p>
-      <p className="mt-10 font-heading text-2xl leading-snug sm:text-3xl">
-        Mais de 7.210 m² projetados
-        <em className="mt-1 block italic">
-          em projetos de arquitetura e interiores
-        </em>
-      </p>
-      <p className="mt-10 text-sm leading-7 text-foreground">
+      <p className="mt-8 text-sm leading-7 text-foreground">
         Showroom | Itaim Bibi — SP
       </p>
       <a
