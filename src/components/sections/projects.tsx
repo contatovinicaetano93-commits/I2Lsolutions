@@ -12,6 +12,17 @@ import {
 import { projects } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
+function ProjectedArea({ className }: { className?: string }) {
+  return (
+    <p className={cn("font-heading text-xl leading-snug", className)}>
+      Mais de 7.210 m² projetados
+      <em className="mt-1 block italic">
+        em projetos de arquitetura e interiores
+      </em>
+    </p>
+  );
+}
+
 export function Projects() {
   const [active, setActive] = useState(0);
   const [shot, setShot] = useState(0);
@@ -51,6 +62,7 @@ export function Projects() {
             Deslize para o lado para ver o projeto
           </p>
         </div>
+        <ProjectedArea className="mt-4 max-w-sm text-lg" />
 
         <div
           ref={tabsRef}
@@ -173,6 +185,7 @@ export function Projects() {
             Projetos
           </SectionKicker>
           <h2 className="font-heading text-4xl">Projetos</h2>
+          <ProjectedArea className="mt-5 max-w-sm" />
           <ul className="mt-10 space-y-6">
             {projects.map((item, index) => {
               const selected = index === active;
