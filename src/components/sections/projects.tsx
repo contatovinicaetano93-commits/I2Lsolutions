@@ -181,11 +181,11 @@ export function Projects() {
         </div>
 
         <div className="flex flex-col lg:col-span-4">
-          <SectionKicker number="03" className="mb-3">
+          <h2 className="sr-only">Projetos</h2>
+          <SectionKicker number="03" className="mb-5">
             Projetos
           </SectionKicker>
-          <h2 className="font-heading text-4xl">Projetos</h2>
-          <ProjectedArea className="mt-5 max-w-sm" />
+          <ProjectedArea className="max-w-sm" />
           <ul className="mt-10 space-y-6">
             {projects.map((item, index) => {
               const selected = index === active;
