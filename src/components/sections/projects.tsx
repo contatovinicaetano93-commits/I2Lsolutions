@@ -52,21 +52,21 @@ export function Projects() {
   }
 
   return (
-    <Section id="projetos" width="wide" className="max-lg:py-12">
+    <Section id="projetos" width="wide" className="max-lg:py-8">
       <div className="lg:hidden">
         <div className="flex items-end justify-between gap-3">
-          <h2 className="font-heading min-w-0 text-2xl leading-tight">
+          <h2 className="font-heading min-w-0 text-xl leading-tight">
             Projetos
           </h2>
-          <p className="w-[7.25rem] shrink-0 pb-0.5 text-right text-[11px] leading-4 tracking-[0.08em] text-foreground/80">
+          <p className="w-[6.5rem] shrink-0 pb-0.5 text-right text-[10px] leading-3 tracking-[0.08em] text-foreground/75">
             Deslize para o lado para ver o projeto
           </p>
         </div>
-        <ProjectedArea className="mt-4 max-w-sm text-lg" />
+        <ProjectedArea className="mt-2 max-w-[17rem] text-base" />
 
         <div
           ref={tabsRef}
-          className="-mx-6 mt-5 flex gap-6 overflow-x-auto px-6 [scrollbar-width:none] [mask-image:linear-gradient(to_right,black_0,black_calc(100%-1.25rem),transparent)] [&::-webkit-scrollbar]:hidden"
+          className="-mx-6 mt-3 flex gap-6 overflow-x-auto px-6 [scrollbar-width:none] [mask-image:linear-gradient(to_right,black_0,black_calc(100%-1.25rem),transparent)] [&::-webkit-scrollbar]:hidden"
         >
           {projects.map((item, index) => {
             const selected = index === active;
@@ -94,7 +94,7 @@ export function Projects() {
         <div
           ref={scrollerRef}
           onScroll={handleScroll}
-          className="-mx-6 mt-5 flex snap-x snap-mandatory overflow-x-auto overscroll-x-contain touch-pan-x [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="-mx-6 mt-3 flex snap-x snap-mandatory overflow-x-auto overscroll-x-contain touch-pan-x [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {project.images.map((src, index) => (
             <div
@@ -113,7 +113,7 @@ export function Projects() {
           ))}
         </div>
 
-        <div className="mt-4">
+        <div className="mt-3">
           {project.place ? (
             <p className="text-sm text-muted-foreground">{project.place}</p>
           ) : null}
