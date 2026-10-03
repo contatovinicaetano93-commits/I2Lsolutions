@@ -54,9 +54,9 @@ export function Projects() {
   return (
     <Section id="projetos" width="wide" className="max-lg:py-8">
       <div className="lg:hidden">
-        <div className="flex items-end justify-between gap-3">
+        <div className="flex items-start justify-between gap-3">
           <h2 className="font-heading min-w-0 text-xl leading-tight">
-            Projetos
+            Alguns de nossos projetos
           </h2>
           <p className="w-[6.5rem] shrink-0 pb-0.5 text-right text-[10px] leading-3 tracking-[0.08em] text-foreground/75">
             Deslize para o lado para ver o projeto
@@ -181,9 +181,9 @@ export function Projects() {
         </div>
 
         <div className="flex flex-col lg:col-span-4">
-          <h2 className="sr-only">Projetos</h2>
-          <SectionKicker number="03" className="mb-5">
-            Projetos
+          <h2 className="sr-only">Alguns de nossos projetos</h2>
+          <SectionKicker number="03" className="mb-5 tracking-[0.16em]">
+            Alguns de nossos projetos
           </SectionKicker>
           <ProjectedArea className="max-w-sm" />
           <ul className="mt-10 space-y-6">

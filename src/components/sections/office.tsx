@@ -1,6 +1,7 @@
+import { InstagramIcon } from "@/components/icons";
 import { Section } from "@/components/section";
 import { WhatsAppButton } from "@/components/whatsapp-button";
-import { messages, site, whatsappHref } from "@/lib/site";
+import { messages, site } from "@/lib/site";
 
 export function Office() {
   return (
@@ -12,20 +13,19 @@ export function Office() {
         Onde você estiver.
       </p>
       <p className="mt-5 text-base leading-8 text-muted-foreground">
-        Nosso showroom fica no Itaim Bibi, em São Paulo, mas você pode escolher
-        como prefere ser atendido: presencialmente ou online.
+        Presencialmente (Itaim Bibi) ou online.
       </p>
-      <p className="mt-8 text-sm leading-7 text-foreground">
-        Showroom | Itaim Bibi — SP
-      </p>
-      <a
-        href={whatsappHref(messages.schedule)}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-2 block text-sm leading-7 text-foreground hover:text-primary"
-      >
-        Agende seu atendimento presencial ou online
-      </a>
+      {site.instagram ? (
+        <a
+          href={`https://instagram.com/${site.instagram}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-8 flex items-center gap-3 text-lg tracking-[0.04em] text-foreground underline decoration-foreground/30 underline-offset-8 hover:decoration-foreground"
+        >
+          <InstagramIcon className="size-5 text-primary" />
+          @{site.instagram}
+        </a>
+      ) : null}
       <a
         href={`https://wa.me/${site.whatsapp.e164}`}
         target="_blank"
