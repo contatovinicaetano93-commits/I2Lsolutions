@@ -7,7 +7,7 @@ export const site = {
     display: "(11) 98911-6464",
   },
   email: "",
-  instagram: "",
+  instagram: "i2lsolutions",
 } as const;
 
 export const whatsappHref = (message: string) =>
